@@ -1,1 +1,16 @@
 @import "./variables";
+
+.navbar {
+  @extend %padding-all;
+  @extend %max-width;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.navLinks {
+  display: flex;
+  li {
+    margin-left: 2rem;
+  }
+}

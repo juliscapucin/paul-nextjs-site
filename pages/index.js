@@ -1,11 +1,20 @@
 import Head from "next/head";
-import Image from "next/image";
 
-import Layout from "../components/Layout";
+import { API_URL } from "@/config/index";
 
-import styles from "../styles/Home.module.scss";
+import Layout from "@/components/Layout";
+import FilmItem from "@/components/FilmItem";
 
-export default function Home() {
+import styles from "@/styles/Home.module.scss";
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${API_URL}/films`);
+  const films = await res.json();
+
+  return { props: { films: films.slice(0, 3) }, revalidate: 1 };
+};
+
+export default function Home({ films }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,15 +24,12 @@ export default function Home() {
       </Head>
       <Layout>
         <h1>Films</h1>
-        <Image
-          className={styles.filmImg1}
-          src={
-            "https://images.unsplash.com/photo-1610030181087-540017dc9d61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-          }
-          width={600}
-          height={360}
-          alt='image'
-        />
+        <div className={styles.filmsContainer}>
+          {films.length === 0 && <div>No Films to show...</div>}
+          {films.map((film) => {
+            return <FilmItem key={film.id} id={film.id} films={films} />;
+          })}
+        </div>
       </Layout>
     </div>
   );

@@ -10,7 +10,7 @@ $clr-black: #222;
 $ff-primary: "acumin-pro", sans-serif;
 $ff-secondary: "acumin-pro", sans-serif;
 $transition: all 0.3s linear;
-$max-width: 1170px;
+$max-width: 1500px;
 $min-width: 580px;
 $fixed-width: 620px;
 
@@ -73,4 +73,14 @@ Spacer Mixins
 }
 %padding-sides {
   padding: 0 2rem;
+}
+
+/*
+=============== 
+Container Mixins
+===============
+*/
+
+%max-width {
+  max-width: $max-width;
 }

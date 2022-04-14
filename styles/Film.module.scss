@@ -1,0 +1,24 @@
+@import "./variables";
+
+.container {
+  > p {
+    color: $clr-white;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  width: clamp(20rem, 40%, 30rem);
+  height: 20rem;
+
+  .img1 {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.paragraph {
+  p {
+    color: $clr-white;
+  }
+}
