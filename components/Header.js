@@ -7,16 +7,15 @@ export default function Header() {
     <header className={styles.navbar}>
       <div className={styles.logo}>
         <Link href='/'>
-          <a>LOGO HERE</a>
+          <a>
+            <h3>
+              Paul de Heer<span className={styles.logoSpan}> editor</span>
+            </h3>
+          </a>
         </Link>
       </div>
       <nav>
         <ul className={styles.navLinks}>
-          <li>
-            <Link href='/films'>
-              <a>Films</a>
-            </Link>
-          </li>
           <li>
             <Link href='/about'>
               <a>About</a>

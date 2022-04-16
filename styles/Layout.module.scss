@@ -1,7 +1,24 @@
 @import "./variables";
 
 .mainContainer {
-  @extend %padding-all;
-  @extend %max-width;
-  margin: auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+/////////////////////////////////////////////////////////
+// TRANSITIONS
+
+.transition {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+  // background-color: $clr-tint;
+}
+
+.transitionUnit {
+  min-width: 100vw;
+  height: 25vh;
+  background-color: $clr-tint;
 }

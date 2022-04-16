@@ -1,34 +1,52 @@
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import VideoPlayer from "@/components/VideoPlayer";
+import useIntersect from "@/hooks/useIntersect";
+
 import styles from "@/styles/FilmItem.module.scss";
 
-export default function FilmItem({ films, id }) {
-  const film = films.find((film) => {
-    return film.id === id;
-  });
+export default function FilmItem({ film, id, updateActiveFilm, index }) {
+  const ref = useRef(null);
+  const [reveal, setReveal] = useState(false);
 
-  const { slug, title, acf } = film;
-  const { image_1, image_2, video_link } = acf;
+  const isOnScreen = useIntersect(ref);
 
-  return (
-    <Link href={`/films/${slug}`}>
-      <a>
-        <div className={styles.imgContainer}>
+  useEffect(() => {
+    if (isOnScreen) {
+      setReveal(true);
+      updateActiveFilm(index);
+    }
+  }, [isOnScreen]);
+
+  const { title, acf } = film;
+  const { image_1, image_2, video_link, category } = acf;
+
+  return category === "cover" ? (
+    <article ref={ref} className={styles.coverWrapper}>
+      <div className={styles.mainFilm}>
+        <VideoPlayer link={video_link} />
+      </div>
+    </article>
+  ) : (
+    <article ref={ref} className={styles.filmItemWrapper}>
+      <div className={styles.filmItemGrid}>
+        <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}>
           <Image
-            className={styles.heroImg}
+            className={styles.img1}
             src={image_1}
-            alt='image'
+            alt={title.rendered}
             layout='fill'
             objectFit='cover'
             objectPosition='center center'
             priority='true'
           />
         </div>
-        <div className={styles.textContainer}>
-          <h3>{title.rendered}</h3>
+        <div className={styles.img2Wrapper}>
+          <VideoPlayer link={video_link} />
         </div>
-      </a>
-    </Link>
+      </div>
+    </article>
   );
 }

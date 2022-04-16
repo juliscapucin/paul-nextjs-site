@@ -1,7 +1,36 @@
 @import "./variables";
 
-.imgContainer {
-  position: relative;
-  width: 15rem;
-  height: 15rem;
+.coverWrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.filmItemWrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 7vw;
+}
+
+.filmItemGrid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+  .img1Wrapper,
+  .img2Wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img1Wrapper {
+    width: 100%;
+    grid-area: 6 / 1 / span 5 / span 4;
+  }
+  .img2Wrapper {
+    width: 100%;
+    padding-top: 1rem;
+    grid-area: 2 / 5 / span 6 / span 7;
+  }
 }

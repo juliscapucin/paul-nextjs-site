@@ -2,14 +2,22 @@
 
 .navbar {
   @extend %padding-all;
+  width: 100%;
   @extend %max-width;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  z-index: 100;
+}
+
+.logoSpan {
+  font-weight: 100;
 }
 
 .navLinks {
   display: flex;
+
   li {
     margin-left: 2rem;
   }

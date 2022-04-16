@@ -1,1 +1,25 @@
 @import "./variables";
+
+.container {
+  padding: 8rem 2rem 0 2rem;
+  overflow: hidden;
+}
+
+.aboutGrid {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap;
+}
+
+.aboutImg {
+  position: relative;
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.aboutParagraph {
+  grid-area: 1 / 2 / span 1 / span 1;
+  p {
+    color: $clr-white;
+  }
+}

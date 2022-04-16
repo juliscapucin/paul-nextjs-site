@@ -90,10 +90,10 @@ button:focus {
   outline: none;
   border: none;
   cursor: pointer;
-  background-color: $clr-tint;
+  background-color: transparent;
   padding: 0.5rem;
   // border-radius: 25% 10%;
-  border-radius: 10px;
+  // border-radius: 10px;
 }
 
 button:active {
@@ -140,7 +140,7 @@ p {
     font-size: 3rem;
   }
   h3 {
-    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
   }
   h4 {
     font-size: 1rem;
