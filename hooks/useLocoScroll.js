@@ -18,6 +18,7 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
         resetNativeScroll: true,
         direction: "horizontal",
         multiplier: 1,
+        scrollFromAnywhere: true,
       });
     });
 

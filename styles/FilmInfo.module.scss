@@ -4,7 +4,7 @@
   width: 40vw;
   position: absolute;
   right: 5vw;
-  top: 50vh;
+  bottom: 3rem;
   z-index: 200;
 }
 
@@ -19,6 +19,10 @@
     font-weight: 300;
     white-space: break-spaces;
   }
+}
+
+.titleContainer {
+  overflow: hidden;
 }
 
 .filmItemTitle {

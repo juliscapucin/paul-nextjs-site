@@ -10,13 +10,25 @@ Transition Variants
 */
 
 const containerVariants = {
-  hidden: { x: "100%" },
+  hidden: { opacity: 0 },
   visible: {
-    x: "0%",
+    opacity: 1,
     transition: { duration: 0.2 },
   },
   exit: {
-    x: "-100%",
+    opacity: 0,
+    transition: { duration: 0.2 },
+  },
+};
+
+const titleVariants = {
+  hidden: { y: "100%" },
+  visible: {
+    y: "0%",
+    transition: { duration: 0.2 },
+  },
+  exit: {
+    y: "-100%",
     transition: { duration: 0.2 },
   },
 };
@@ -34,14 +46,19 @@ export default function FilmInfo({
       exit='exit'
       className={styles.filmInfoContainer}
     >
-      <Link href={`/films/${activeFilmSlug}`}>
-        <a>
-          <div className={styles.filmItemInfo}>
-            <h1 className={styles.filmItemTitle}>{activeFilmName}</h1>
-            <p className={styles.filmItemShortdesc}>{activeFilmDescription}</p>
-          </div>
-        </a>
-      </Link>
+      <div className={styles.filmItemInfo} data-scroll-sticky>
+        <div className={styles.titleContainer}>
+          <motion.h1 variants={titleVariants} className={styles.filmItemTitle}>
+            {activeFilmName}
+          </motion.h1>
+        </div>
+        <p className={styles.filmItemShortdesc}>{activeFilmDescription}</p>
+        {activeFilmSlug !== "cover" && (
+          <Link href={`/films/${activeFilmSlug}`}>
+            <a>View project</a>
+          </Link>
+        )}
+      </div>
     </motion.div>
   );
 }
