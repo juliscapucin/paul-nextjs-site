@@ -81,7 +81,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: "Website XYZ",
+  title: "Paul de Heer | Film editor",
   description: "Here goes description for meta tag.",
   keywords: "film, filmmaking, edition",
 };

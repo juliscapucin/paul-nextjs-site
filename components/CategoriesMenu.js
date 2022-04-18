@@ -13,13 +13,13 @@ function CategoriesMenu({
   const [selectedButton, setSelectedButton] = useState("all");
 
   const filmFilter = (category) => {
-    let filteredFilms = films.filter((item) => item.category === category);
+    let filteredFilms = films.filter((item) => item.acf.category === category);
     setActiveFilm(0);
     setFilmsArray(filteredFilms);
   };
 
   const projectAmount = (category) => {
-    let filteredFilms = films.filter((item) => item.category === category);
+    let filteredFilms = films.filter((item) => item.acf.category === category);
     return filteredFilms.length;
   };
 
@@ -31,8 +31,8 @@ function CategoriesMenu({
             setSelectedButton("all");
             setFilmsArray(films);
           }}
-          className={`styles.all ${
-            selectedButton === "all" ? "styles.categoryActive" : ""
+          className={`${styles["all"]} ${
+            selectedButton === "all" ? styles["categoryActive"] : ""
           }`}
         >
           All
@@ -45,10 +45,8 @@ function CategoriesMenu({
             setSelectedButton("documentary");
             filmFilter("documentary");
           }}
-          className={`documentary ${
-            selectedButton === "styles.documentary"
-              ? "styles.categoryActive"
-              : ""
+          className={`${styles["documentary"]} ${
+            selectedButton === "documentary" ? styles["categoryActive"] : ""
           }`}
         >
           Documentary
@@ -63,8 +61,8 @@ function CategoriesMenu({
             setSelectedButton("fiction");
             filmFilter("fiction");
           }}
-          className={`styles.fiction ${
-            selectedButton === "fiction" ? "styles.categoryActive" : ""
+          className={`${styles["fiction"]} ${
+            selectedButton === "fiction" ? styles["categoryActive"] : ""
           }`}
         >
           Fiction
@@ -77,8 +75,8 @@ function CategoriesMenu({
             setSelectedButton("commercial");
             filmFilter("commercial");
           }}
-          className={`styles.commercial ${
-            selectedButton === "commercial" ? "styles.categoryActive" : ""
+          className={`${styles["commercial"]} ${
+            selectedButton === "commercial" ? styles["categoryActive"] : ""
           }`}
         >
           Commercial

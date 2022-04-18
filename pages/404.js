@@ -8,7 +8,7 @@ import styles from "@/styles/404.module.scss";
 export default function PageNotFound() {
   return (
     <Layout title='Page Not Found'>
-      <div className='errorTitle'>
+      <div className={styles.errorContent}>
         <h2>
           <FaExclamationTriangle />
         </h2>
