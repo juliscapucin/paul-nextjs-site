@@ -56,8 +56,8 @@ export default function Home({ films }) {
             setFilmsArray={setFilmsArray}
             setActiveFilm={setActiveFilm}
             films={films}
-            listType={"View as mosaic"}
-            link={"/filmlist"}
+            listType={"View as list"}
+            link={"/films"}
           />
         </ul>
         <div className={styles.filmInfo}>

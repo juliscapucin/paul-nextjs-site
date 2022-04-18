@@ -1,8 +1,37 @@
 @import "./variables";
 
+.filmCategories {
+  position: absolute;
+  top: 5rem;
+  left: 0.6rem;
+  display: flex;
+  width: 100%;
+  z-index: 200;
+}
+
 .filmsContainer {
   width: 100%;
+  padding: 10rem 2rem 5rem 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: clamp(8rem, 15vw, 12rem);
+  height: clamp(8rem, 15vw, 12rem);
+}
+
+.filmListInfo {
+  padding-top: 0.5rem;
+  h4 {
+    color: $clr-tint;
+  }
+}
+
+@media screen and (min-width: $screen-large) {
+  .filmsContainer {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
