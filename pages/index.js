@@ -1,10 +1,11 @@
-import Head from "next/head";
-import Link from "next/link";
-
 import { API_URL } from "@/config/index";
 import React, { useState, useEffect, useRef } from "react";
+import { AnimatePresence } from "framer-motion";
+
+import Head from "next/head";
 
 import Layout from "@/components/Layout";
+import FilmInfo from "@/components/FilmInfo";
 import FilmItem from "@/components/FilmItem";
 import CategoriesMenu from "@/components/CategoriesMenu";
 
@@ -60,29 +61,29 @@ export default function Home({ films }) {
             link={"/films"}
           />
         </ul>
-        <div className={styles.filmInfo}>
-          <Link href={`/films/${activeFilmSlug}`}>
-            <a>
-              <div className={styles.filmItemInfo}>
-                <h1 className={styles.filmItemTitle}>{activeFilmName}</h1>
-                <p className={styles.filmItemShortdesc}>
-                  {activeFilmDescription}
-                </p>
-              </div>
-            </a>
-          </Link>
+        <div>
+          <AnimatePresence exitBeforeEnter>
+            <FilmInfo
+              className={styles.filmInfo}
+              activeFilmName={activeFilmName}
+              activeFilmSlug={activeFilmSlug}
+              activeFilmDescription={activeFilmDescription}
+              key={activeFilmName}
+            />
+          </AnimatePresence>
         </div>
         <section ref={refScrollContainer} data-scroll-container>
           <div className={styles.films}>
             {filmsArray.map((film, index) => (
-              <FilmItem
-                film={film}
-                key={film.id}
-                index={index}
-                updateActiveFilm={(index) => {
-                  setActiveFilm(index);
-                }}
-              />
+              <AnimatePresence exitBeforeEnter key={film.id}>
+                <FilmItem
+                  film={film}
+                  index={index}
+                  updateActiveFilm={(index) => {
+                    setActiveFilm(index);
+                  }}
+                />
+              </AnimatePresence>
             ))}
           </div>
         </section>

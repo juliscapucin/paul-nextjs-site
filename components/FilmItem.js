@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,6 +8,30 @@ import VideoPlayer from "@/components/VideoPlayer";
 import useIntersect from "@/hooks/useIntersect";
 
 import styles from "@/styles/FilmItem.module.scss";
+
+/*
+=================== 
+Transition Variants
+===================
+*/
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+/*
+=================== 
+Film Item
+===================
+*/
 
 export default function FilmItem({ film, id, updateActiveFilm, index }) {
   const ref = useRef(null);
@@ -21,7 +47,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
   }, [isOnScreen]);
 
   const { title, acf } = film;
-  const { image_1, image_2, video_link, category } = acf;
+  const { image_1, video_link, category } = acf;
 
   return category === "cover" ? (
     <article ref={ref} className={styles.coverWrapper}>
@@ -30,7 +56,14 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
       </div>
     </article>
   ) : (
-    <article ref={ref} className={styles.filmItemWrapper}>
+    <motion.article
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      ref={ref}
+      className={styles.filmItemWrapper}
+    >
       <div className={styles.filmItemGrid}>
         <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}>
           <Image
@@ -47,6 +80,6 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
           <VideoPlayer link={video_link} />
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }

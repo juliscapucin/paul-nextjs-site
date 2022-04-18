@@ -1,12 +1,11 @@
 import { API_URL } from "@/config/index";
+import { AnimatePresence } from "framer-motion";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 
 import Layout from "@/components/Layout";
 import CategoriesMenu from "@/components/CategoriesMenu";
-import FilmItem from "@/components/FilmItem";
+import FilmListItem from "@/components/FilmListItem";
 
 import styles from "@/styles/Films.module.scss";
 
@@ -20,9 +19,6 @@ export const getStaticProps = async () => {
 export default function Films({ films }) {
   const [filmsArray, setFilmsArray] = useState(films);
   const [activeFilm, setActiveFilm] = useState(1);
-  const [activeFilmName, setActiveFilmName] = useState("");
-  const [activeFilmSlug, setActiveFilmSlug] = useState("");
-  const [activeFilmDescription, setActiveFilmDescription] = useState("");
 
   return (
     <Layout title={"Films"}>
@@ -36,31 +32,13 @@ export default function Films({ films }) {
         />
       </ul>
       <div className={styles.filmsContainer}>
-        {films.length === 0 && <div>No Films to show...</div>}
-        {films.map((film) => {
-          console.log(film.acf.category);
+        {filmsArray.length === 0 && <div>No Films to show...</div>}
+        {filmsArray.map((film) => {
           if (film.acf.category !== "cover") {
             return (
-              <Link href={`/films/${film.slug}`}>
-                <a>
-                  <div className={styles.filmListItem}>
-                    <div className={styles.imgContainer} key={film.id}>
-                      <Image
-                        className={styles.img1}
-                        src={film.acf.image_1}
-                        alt={film.title.rendered}
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center center'
-                        priority='true'
-                      />
-                    </div>
-                    <div className={styles.filmListInfo}>
-                      <h4>{film.title.rendered}</h4>
-                    </div>
-                  </div>
-                </a>
-              </Link>
+              <AnimatePresence exitBeforeEnter>
+                <FilmListItem {...film} />;
+              </AnimatePresence>
             );
           }
         })}

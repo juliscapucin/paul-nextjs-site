@@ -1,0 +1,35 @@
+@import "./variables";
+
+.filmListItem {
+  transition: $transition;
+  &:hover {
+    transform: scale(1.1);
+    transition: $transition;
+    h4 {
+      color: $clr-white;
+      transition: $transition;
+    }
+  }
+}
+
+.imgContainer {
+  position: relative;
+  width: clamp(8rem, 15vw, 12rem);
+  height: clamp(8rem, 15vw, 12rem);
+}
+
+.img1 {
+  transition: $transition;
+  &:hover {
+    transform: scale(1.1);
+    transition: $transition;
+  }
+}
+
+.filmListInfo {
+  padding-top: 0.5rem;
+  h4 {
+    color: $clr-tint;
+    transition: $transition;
+  }
+}
