@@ -1,0 +1,257 @@
+// .section-about,
+// .section-contact {
+//   margin: 30vh 5vw 0 5vw;
+// }
+
+.title-wrapper {
+  overflow: hidden;
+  margin-top: 10rem;
+}
+
+/////////////////////////////////////////////////////////
+// FILMS - HOME
+
+.films,
+.all-films {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.films-container {
+  position: relative;
+}
+
+.main-film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.film-item-wrapper {
+  position: relative;
+  min-width: 100vw;
+  height: 100%;
+  padding: 2rem 5vw;
+}
+
+.film-item-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  // grid-template-areas: "img1 img1 img2 img2 img2";
+
+  .img1-wrapper,
+  .img2-wrapper {
+    overflow: hidden;
+  }
+
+  .img1-wrapper {
+    width: 100%;
+    // grid-area: img1;
+    grid-area: 6 / 1 / span 5 / span 4;
+  }
+  .img2-wrapper {
+    width: 100%;
+    padding-top: 1rem;
+    // grid-area: img2;
+    grid-area: 2 / 5 / span 6 / span 7;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.film-item-info {
+  grid-area: 8 / 7 / span 2 / span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 3rem 1rem 0 0;
+  z-index: 20;
+}
+
+.film-item-title {
+  mix-blend-mode: multiply;
+  color: rgb(235, 128, 66);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.film-item-short-desc {
+  p {
+    white-space: break-spaces;
+    text-align: right;
+  }
+}
+
+/////////////////////////////////////////////////////////
+// FILMS - PAGE
+
+.films-vertical {
+  width: 100vw;
+}
+
+.films-item-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.film-button-wrapper {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vw;
+  z-index: 50;
+}
+
+.films-item-img {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.films-item-info {
+  position: fixed;
+  bottom: 2rem;
+  right: 5vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 20;
+}
+
+/////////////////////////////////////////////////////////
+// FILM INDEX
+
+.film-list {
+  padding: 10rem 5vw 0 5vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.film-list-item-wrapper {
+  width: clamp(10rem, 20%, 22rem);
+}
+
+.film-list-item-name {
+  position: absolute;
+  z-index: 60;
+  opacity: 0;
+}
+
+.film-list-item-img {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/////////////////////////////////////////////////////////
+// SINGLE FILM
+
+.single-film-header {
+  width: 90vw;
+  margin: 8rem auto 0 5vw;
+}
+
+.single-film {
+  height: 100vh;
+  display: flex;
+}
+.single-film-img {
+  width: 70vw;
+  img {
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
+  }
+}
+.single-film-info {
+  width: 38vw;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  white-space: break-spaces;
+  .single-film-details {
+    padding: 3rem;
+  }
+}
+
+.single-film-paragraph {
+  margin: 0 10rem;
+  width: 40vw;
+  white-space: break-spaces;
+}
+
+.single-film-credits {
+  margin: 0 0 0 10rem;
+  width: 50vw;
+  white-space: break-spaces;
+}
+
+/////////////////////////////////////////////////////////
+// ABOUT
+
+.section-about {
+  opacity: 1;
+}
+
+.about-wrapper {
+  display: flex;
+}
+
+.about-text {
+  margin-left: 5vw;
+  width: 50vw;
+}
+
+.about-paragraph {
+  padding: 2rem 5vw 0 0;
+}
+
+.about-image {
+  margin-top: 10rem;
+  width: 50vw;
+  height: 80vh;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+}
+
+/////////////////////////////////////////////////////////
+// CONTACT
+
+.section-contact {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10rem 5vw 3rem 5vw;
+}
+
+.contact-paragraph {
+  width: clamp(20rem, 40vw, 50rem);
+  padding: 2rem 5vw 2rem 0;
+}
