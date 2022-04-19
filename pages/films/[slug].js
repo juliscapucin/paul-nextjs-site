@@ -1,8 +1,8 @@
 import { API_URL } from "@/config/index";
+import { useRouter } from "next/router";
 import React, { useRef } from "react";
 
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 
 import Layout from "@/components/Layout";
@@ -20,7 +20,7 @@ export const getStaticPaths = async () => {
 
   const paths = films.map((film) => ({ params: { slug: film.slug } }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 // GET STATIC PROPS
@@ -35,7 +35,16 @@ export const getStaticProps = async ({ params: { slug } }) => {
 // FILM
 // ----
 export default function Film({ film }) {
+  const refScrollContainer = useRef(null);
+  useLocoScroll(refScrollContainer, 3);
+
+  const router = useRouter();
+
+  if (router.isFallback) {
+    <h1>Data is loading</h1>;
+  }
   const { title, acf } = film;
+
   const {
     main_rich_text,
     image_1,
@@ -45,10 +54,6 @@ export default function Film({ film }) {
     video_link,
     film_credits,
   } = acf;
-
-  const refScrollContainer = useRef(null);
-
-  useLocoScroll(refScrollContainer, 3);
 
   return (
     <Layout title={"Film"}>

@@ -13,7 +13,7 @@ export default function PageNotFound() {
           <FaExclamationTriangle />
         </h2>
         <h1>Error!</h1>
-        <h3>Sorry, this page doesn't exist.</h3>
+        <h3>Sorry, this page does not exist.</h3>
         <Link href='/'>Go back to Home Page</Link>
       </div>
     </Layout>
