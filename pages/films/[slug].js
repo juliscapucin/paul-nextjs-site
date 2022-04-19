@@ -12,25 +12,34 @@ import useLocoScroll from "@/hooks/useLocoScroll";
 
 import styles from "@/styles/Film.module.scss";
 
-// GET STATIC PATHS
-// ----------------
-export const getStaticPaths = async () => {
-  const res = await fetch(`${API_URL}/films`);
-  const films = await res.json();
-
-  const paths = films.map((film) => ({ params: { slug: film.slug } }));
-
-  return { paths, fallback: false };
-};
-
-// GET STATIC PROPS
-// ----------------
-export const getStaticProps = async ({ params: { slug } }) => {
+// GET SERVER SIDE PROPS
+// ---------------------
+export const getServerSideProps = async ({ query: { slug } }) => {
   const res = await fetch(`${API_URL}/films?slug=${slug}`);
   const films = await res.json();
 
-  return { props: { film: films[0] }, revalidate: 1 };
+  return { props: { film: films[0] } };
 };
+
+// GET STATIC PATHS
+// ----------------
+// export const getStaticPaths = async () => {
+//   const res = await fetch(`${API_URL}/films`);
+//   const films = await res.json();
+
+//   const paths = films.map((film) => ({ params: { slug: film.slug } }));
+
+//   return { paths, fallback: true };
+// };
+
+// GET STATIC PROPS
+// ----------------
+// export const getStaticProps = async ({ params: { slug } }) => {
+//   const res = await fetch(`${API_URL}/films?slug=${slug}`);
+//   const films = await res.json();
+
+//   return { props: { film: films[0] }, revalidate: 1 };
+// };
 
 // FILM
 // ----
