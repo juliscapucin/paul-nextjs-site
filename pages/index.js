@@ -1,4 +1,4 @@
-import { API_URL } from "@/config/index";
+// import { API_URL } from "@/config/index";
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 
@@ -25,7 +25,7 @@ import styles from "@/styles/Home.module.scss";
 // GET SERVER SIDE PROPS
 // ---------------------
 export const getServerSideProps = async () => {
-  const res = await fetch(`${API_URL}/films`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
   const films = await res.json();
 
   // console.log(films);

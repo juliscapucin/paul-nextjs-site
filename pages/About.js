@@ -1,4 +1,4 @@
-import { API_URL } from "@/config/index";
+// import { API_URL } from "@/config/index";
 import Image from "next/image";
 
 import Layout from "@/components/Layout";
@@ -17,7 +17,7 @@ import styles from "@/styles/About.module.scss";
 // GET SERVER SIDE PROPS
 // ---------------------
 export const getServerSideProps = async () => {
-  const res = await fetch(`${API_URL}/about`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
   const about = await res.json();
 
   return { props: { about: about } };

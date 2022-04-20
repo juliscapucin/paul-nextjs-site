@@ -1,4 +1,4 @@
-import { API_URL } from "@/config/index";
+// import { API_URL } from "@/config/index";
 
 import Layout from "@/components/Layout";
 import Map from "@/components/Map";
@@ -17,7 +17,7 @@ import styles from "@/styles/Contact.module.scss";
 // GET SERVER SIDE PROPS
 // ---------------------
 export const getServerSideProps = async () => {
-  const res = await fetch(`${API_URL}/contact`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`);
   const contact = await res.json();
 
   return { props: { contact: contact } };

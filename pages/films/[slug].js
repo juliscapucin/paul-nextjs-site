@@ -1,4 +1,4 @@
-import { API_URL } from "@/config/index";
+// import { NEXT_PUBLIC_API_URL } from "@/config/index";
 import { useRouter } from "next/router";
 import React, { useRef } from "react";
 
@@ -15,7 +15,9 @@ import styles from "@/styles/Film.module.scss";
 // GET SERVER SIDE PROPS
 // ---------------------
 export const getServerSideProps = async ({ query: { slug } }) => {
-  const res = await fetch(`${API_URL}/films?slug=${slug}`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/films?slug=${slug}`
+  );
   const films = await res.json();
 
   return { props: { film: films[0] } };
@@ -24,14 +26,13 @@ export const getServerSideProps = async ({ query: { slug } }) => {
 // GET STATIC PATHS
 // ----------------
 // export const getStaticPaths = async () => {
-//   const res = await fetch(`${API_URL}/films?_embed`);
+//   const res = await fetch(`${API_URL}/films`);
 //   const films = await res.json();
 
 //   const paths = films.map((film) => ({ params: { slug: film.slug } }));
+//   // console.log(paths);
 
-//   console.log(paths);
-
-//   return { paths, fallback: "blocking" };
+//   return { paths, fallback: false };
 // };
 
 // GET STATIC PROPS
@@ -51,9 +52,9 @@ export default function Film({ film }) {
 
   const router = useRouter();
 
-  if (router.isFallback) {
-    <h1>Data is loading</h1>;
-  }
+  // if (router.isFallback) {
+  //   <h1>Data is loading</h1>;
+  // }
   const { title, acf } = film;
 
   const {

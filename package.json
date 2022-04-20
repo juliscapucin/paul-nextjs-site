@@ -1,11 +1,11 @@
 {
   "name": "next-site",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p ${PORT:-2222}",
+    "start": "next start -p 2222",
     "lint": "next lint"
   },
   "dependencies": {
