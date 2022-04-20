@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
   const res = await fetch(`${API_URL}/about`);
   const about = await res.json();
 
-  return { props: { about: about[0] } };
+  return { props: { about: about } };
 };
 
 // FILM
