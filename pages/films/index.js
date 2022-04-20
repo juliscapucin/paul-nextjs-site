@@ -9,11 +9,22 @@ import FilmListItem from "@/components/FilmListItem";
 
 import styles from "@/styles/Films.module.scss";
 
-export const getStaticProps = async () => {
+// GET STATIC PROPS
+// ----------------
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${API_URL}/films`);
+//   const films = await res.json();
+
+//   return { props: { films }, revalidate: 1 };
+// };
+
+// GET SERVER SIDE PROPS
+// ---------------------
+export const getServerSideProps = async () => {
   const res = await fetch(`${API_URL}/films`);
   const films = await res.json();
 
-  return { props: { films }, revalidate: 1 };
+  return { props: { film: films[0] } };
 };
 
 export default function Films({ films }) {

@@ -7,11 +7,20 @@ import styles from "@/styles/About.module.scss";
 
 // GET STATIC PROPS
 // ----------------
-export const getStaticProps = async () => {
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${API_URL}/about`);
+//   const about = await res.json();
+
+//   return { props: { about }, revalidate: 1 };
+// };
+
+// GET SERVER SIDE PROPS
+// ---------------------
+export const getServerSideProps = async () => {
   const res = await fetch(`${API_URL}/about`);
   const about = await res.json();
 
-  return { props: { about }, revalidate: 1 };
+  return { props: { about: about[0] } };
 };
 
 // FILM

@@ -7,11 +7,20 @@ import styles from "@/styles/Contact.module.scss";
 
 // GET STATIC PROPS
 // ----------------
-export const getStaticProps = async () => {
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${API_URL}/contact`);
+//   const contact = await res.json();
+
+//   return { props: { contact }, revalidate: 1 };
+// };
+
+// GET SERVER SIDE PROPS
+// ---------------------
+export const getServerSideProps = async () => {
   const res = await fetch(`${API_URL}/contact`);
   const contact = await res.json();
 
-  return { props: { contact }, revalidate: 1 };
+  return { props: { contact: contact[0] } };
 };
 
 // FILM

@@ -15,11 +15,20 @@ import styles from "@/styles/Home.module.scss";
 
 // GET STATIC PROPS
 // ----------------
-export const getStaticProps = async () => {
+// export const getStaticProps = async () => {
+//   const res = await fetch(`${API_URL}/films`);
+//   const films = await res.json();
+
+//   return { props: { films }, revalidate: 1 };
+// };
+
+// GET SERVER SIDE PROPS
+// ---------------------
+export const getServerSideProps = async () => {
   const res = await fetch(`${API_URL}/films`);
   const films = await res.json();
 
-  return { props: { films }, revalidate: 1 };
+  return { props: { film: films[0] } };
 };
 
 // HOME
