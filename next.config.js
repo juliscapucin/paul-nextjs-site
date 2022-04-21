@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: { domains: ["images.unsplash.com", "2022.juliscapucin.com"] },
+  images: {
+    domains: ["images.unsplash.com", "wp-content.taalmaatjesnederlands.nl"],
+  },
 };
 
 module.exports = nextConfig;

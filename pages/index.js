@@ -1,6 +1,10 @@
 // import { API_URL } from "@/config/index";
+// import films from "../data/films.json";
+// import getFilms from "../data/getFilms";
+
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import Head from "next/head";
 
@@ -12,26 +16,6 @@ import CategoriesMenu from "@/components/CategoriesMenu";
 import useLocoScroll from "@/hooks/useLocoScroll";
 
 import styles from "@/styles/Home.module.scss";
-
-// GET STATIC PROPS
-// ----------------
-// export const getStaticProps = async () => {
-//   const res = await fetch(`${API_URL}/films`);
-//   const films = await res.json();
-
-//   return { props: { films }, revalidate: 1 };
-// };
-
-// GET SERVER SIDE PROPS
-// ---------------------
-export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
-  const films = await res.json();
-
-  // console.log(films);
-
-  return { props: { films: films } };
-};
 
 // HOME
 // ----
@@ -50,8 +34,8 @@ export default function Home({ films }) {
 
   useEffect(() => {
     let filmData = filmsArray.filter((item, index) => index === activeFilm);
-    setActiveFilmName(filmData[0].title.rendered);
-    setActiveFilmDescription(filmData[0].acf.short_description);
+    setActiveFilmName(filmData[0].title);
+    setActiveFilmDescription(filmData[0].filmACF.shortDescription);
     setActiveFilmSlug(filmData[0].slug);
   }, [activeFilm, filmsArray]);
 
@@ -102,3 +86,58 @@ export default function Home({ films }) {
     </div>
   );
 }
+
+// GET STATIC PROPS
+// ----------------
+export async function getStaticProps() {
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
+  // const films = await res.json();
+
+  const client = new ApolloClient({
+    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query NewQuery {
+        films {
+          nodes {
+            title
+            slug
+            filmACF {
+              category
+              credits
+              fieldGroupName
+              filmInfo
+              filmTitle
+              image1 {
+                sourceUrl
+              }
+              image2 {
+                sourceUrl
+              }
+              mainText
+              shortDescription
+              videoLink
+            }
+            id
+          }
+        }
+      }
+    `,
+  });
+
+  return { props: { films: data.films.nodes } };
+}
+
+// GET SERVER SIDE PROPS
+// ---------------------
+// export const getServerSideProps = async () => {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
+//   const films = await res.json();
+
+//   console.log(films);
+
+//   return { props: { films: films } };
+// };

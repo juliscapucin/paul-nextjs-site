@@ -1,34 +1,18 @@
 // import { API_URL } from "@/config/index";
+// import about from "../data/about.json";
+
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
 import Image from "next/image";
 
 import Layout from "@/components/Layout";
 
 import styles from "@/styles/About.module.scss";
 
-// GET STATIC PROPS
-// ----------------
-// export const getStaticProps = async () => {
-//   const res = await fetch(`${API_URL}/about`);
-//   const about = await res.json();
-
-//   return { props: { about }, revalidate: 1 };
-// };
-
-// GET SERVER SIDE PROPS
-// ---------------------
-export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
-  const about = await res.json();
-
-  return { props: { about: about } };
-};
-
-// FILM
-// ----
+// ABOUT
+// -----
 export default function About({ about }) {
-  const { acf } = about[0];
-
-  const { text, image } = acf;
+  const { aboutText, aboutImage } = about;
 
   return (
     <Layout title={"About"}>
@@ -38,7 +22,7 @@ export default function About({ about }) {
           <div className={styles.aboutImg}>
             <Image
               className={styles.img}
-              src={image}
+              src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'
               layout='fill'
               objectFit='cover'
@@ -48,10 +32,41 @@ export default function About({ about }) {
           </div>
           <div
             className={styles.aboutParagraph}
-            dangerouslySetInnerHTML={{ __html: text }}
+            dangerouslySetInnerHTML={{ __html: aboutText }}
           />
         </div>
       </div>
     </Layout>
   );
+}
+
+// GET STATIC PROPS
+// ----------------
+export async function getStaticProps() {
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
+  // const about = await res.json();
+
+  const client = new ApolloClient({
+    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query NewQuery {
+        allAbout {
+          nodes {
+            aboutACF {
+              aboutText
+              aboutImage {
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return { props: { about: data.allAbout.nodes[0].aboutACF } };
 }

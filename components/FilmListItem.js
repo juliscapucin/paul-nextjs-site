@@ -26,7 +26,7 @@ const itemVariants = {
   exit: { opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } },
 };
 
-export default function FilmListItem({ slug, acf, title, id }) {
+export default function FilmListItem({ slug, filmACF, title, id }) {
   return (
     <motion.div
       variants={containerVariants}
@@ -40,7 +40,7 @@ export default function FilmListItem({ slug, acf, title, id }) {
             <div className={styles.imgContainer}>
               <Image
                 className={styles.img1}
-                src={acf.image_1}
+                src={filmACF.image_1}
                 alt={title.rendered}
                 layout='fill'
                 objectFit='cover'
@@ -49,7 +49,7 @@ export default function FilmListItem({ slug, acf, title, id }) {
               />
             </div>
             <div className={styles.filmListInfo}>
-              <h4>{title.rendered}</h4>
+              <h4>{title}</h4>
             </div>
           </motion.div>
         </a>

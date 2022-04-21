@@ -1,34 +1,17 @@
 // import { API_URL } from "@/config/index";
+// import contact from "../data/contact.json";
+
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import Layout from "@/components/Layout";
 import Map from "@/components/Map";
 
 import styles from "@/styles/Contact.module.scss";
 
-// GET STATIC PROPS
-// ----------------
-// export const getStaticProps = async () => {
-//   const res = await fetch(`${API_URL}/contact`);
-//   const contact = await res.json();
-
-//   return { props: { contact }, revalidate: 1 };
-// };
-
-// GET SERVER SIDE PROPS
-// ---------------------
-export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact`);
-  const contact = await res.json();
-
-  return { props: { contact: contact } };
-};
-
-// FILM
-// ----
+// CONTACT
+// -------
 export default function Contact({ contact }) {
-  const { acf } = contact[0];
-
-  const { text } = acf;
+  const { contactText } = contact;
 
   return (
     <Layout title={"Contact"}>
@@ -37,7 +20,7 @@ export default function Contact({ contact }) {
         <div className={styles.contactGrid}>
           <div
             className={styles.contactParagraph}
-            dangerouslySetInnerHTML={{ __html: text }}
+            dangerouslySetInnerHTML={{ __html: contactText }}
           />
           <div className={styles.contactMap}>
             <Map />
@@ -46,4 +29,32 @@ export default function Contact({ contact }) {
       </div>
     </Layout>
   );
+}
+
+// GET STATIC PROPS
+// ----------------
+export async function getStaticProps() {
+  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
+  // const about = await res.json();
+
+  const client = new ApolloClient({
+    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query NewQuery {
+        allContact {
+          nodes {
+            contactACF {
+              contactText
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return { props: { contact: data.allContact.nodes[0].contactACF } };
 }

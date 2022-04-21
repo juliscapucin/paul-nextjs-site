@@ -1,0 +1,315 @@
+[
+  {
+    "id": 56,
+    "date": "2022-04-14T14:34:50",
+    "date_gmt": "2022-04-14T14:34:50",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=56"
+    },
+    "modified": "2022-04-19T09:07:14",
+    "modified_gmt": "2022-04-19T09:07:14",
+    "slug": "cover",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/cover/",
+    "title": { "rendered": "Cover (always on top)" },
+    "template": "",
+    "acf": {
+      "main_rich_text": "<p>No text</p>\n",
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/0c21f0d5-2430-47d5-805b-b6a4fb0f23d7_car_202x158.jpg",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/0c21f0d5-2430-47d5-805b-b6a4fb0f23d7_car_202x158.jpg",
+      "video_link": "https://player.vimeo.com/video/337564327",
+      "category": "cover",
+      "short_description": "No text",
+      "film_details": "<p>No text</p>\n",
+      "film_credits": "<p>No text</p>\n"
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/56" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=56" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "date": "2022-04-14T14:55:15",
+    "date_gmt": "2022-04-14T14:55:15",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=60"
+    },
+    "modified": "2022-04-15T14:16:18",
+    "modified_gmt": "2022-04-15T14:16:18",
+    "slug": "alexa",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/alexa/",
+    "title": { "rendered": "Alexa" },
+    "template": "",
+    "acf": {
+      "category": "commercial",
+      "main_rich_text": "<p>Alexa commercial. In three different languages: German, French and English. Alexa commercial, and the text goes here for the project: Alexa commercial spot. Text goes here for Alexa commercial spot, produced in three different languages: German, French and English. Alexa commercial. Text goes here for Alexa commercial spot. Alexa commercial. Text goes here for Alexa commercial spot. In three different languages: German, French and English.</p>\n<p>Text goes here for Alexa commercial spot, produced in three different languages: German, French and English. Alexa commercial. Text goes here for Alexa commercial spot. Alexa commercial. Text goes here for Alexa commercial spot. In three different languages: German, French and English.</p>\n",
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/bc1bec3d-403c-49ee-996f-9a5bfb2ed32f_car_202x158.jpg",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/bc1bec3d-403c-49ee-996f-9a5bfb2ed32f_car_202x158.jpg",
+      "video_link": "https://player.vimeo.com/video/187810830",
+      "short_description": "Alexa commercial. In three different languages: German, French and English. Alexa commercial, and the text goes here for the project",
+      "film_details": "<p>Alexa commercial.<br />\nIn three different languages<br />\nGerman, French and English.<br />\nAlexa commercial, and the text goes here for the project.</p>\n",
+      "film_credits": "<p>Alexa commercial.<br />\nIn three different languages<br />\nGerman, French and English.<br />\nAlexa commercial, and the text goes here for the project.</p>\n"
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/60" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=60" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 39,
+    "date": "2022-04-13T16:39:09",
+    "date_gmt": "2022-04-13T16:39:09",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=39"
+    },
+    "modified": "2022-04-18T08:38:33",
+    "modified_gmt": "2022-04-18T08:38:33",
+    "slug": "a-greek-winter",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/a-greek-winter/",
+    "title": { "rendered": "A Greek Winter" },
+    "template": "",
+    "acf": {
+      "video_link": "https://player.vimeo.com/video/187810830",
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/1743fee6-efcf-43e5-aff5-0af9006e613f_car_202x158.jpeg",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/e7dbd8e3-5ee9-4cac-ab04-a9e5f581940a_car_202x158.jpeg",
+      "category": "fiction",
+      "main_rich_text": "<p>Tasos Pafralides and his sister Evdokia run a small gas station in Thessaloniki. In the wintertime, they also supply fuel oil to many of the apartment buildings and houses in the city. But the deepening economic crisis in Greece means more and more people are unable to pay for the oil.</p>\n<p>A Greek Winter follows Tasos as he goes about his work in the city. He has to listen to many tales of woe about rising taxes and corrupt politicians, and to pleas for deferred payment. Elderly people in particular \u2013 many of whom have been deserted by their own children \u2013 are at their wit\u2019s end. As one woman puts it, \u201cWe used to be able to take care of ourselves, but now we\u2019ve become beggars in our own country.\u201d</p>\n<p>Unlike his sister, Tasos seems indifferent and businesslike, consciously choosing not to let any friendship develop with his customers, because \u201cin the end they\u2019ll take advantage of it.\u201d This is a film about coldness and warmth, in a climatic sense as well as in human relationships.</p>\n",
+      "short_description": "The economic crisis in Greece means many people are unable to pay for warming up their houses: \"We\u2019ve become beggars in our own country.\u201d",
+      "film_details": "",
+      "film_credits": ""
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/39" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=39" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "date": "2022-04-04T15:01:56",
+    "date_gmt": "2022-04-04T15:01:56",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=29"
+    },
+    "modified": "2022-04-15T11:47:35",
+    "modified_gmt": "2022-04-15T11:47:35",
+    "slug": "voer-de-bij-bij",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/voer-de-bij-bij/",
+    "title": { "rendered": "Voer de Bij Bij" },
+    "template": "",
+    "acf": {
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/voerdebijbij01.jpeg",
+      "video_link": "https://player.vimeo.com/video/534146206?title=0&amp;byline=0&amp;portrait=0",
+      "category": "commercial",
+      "main_rich_text": "<p>Without polllinators there would be no life. Most of the world\u2019s food production is depending on pollination. However, biodiversity is decreasing due to large scale agriculture. We are The Pollinators. We are creating a healthy environment for the pollinating species. The Pollinators are a community and a platform that mainly focuses on supporting and connecting people and initiatives that protect and stimulate the pollinators and biodiversity.</p>\n",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/5aec8ee3-bd91-4188-b602-2a2a7d73c21e_car_202x158.jpg",
+      "short_description": "The Pollinators supports and connects people and initiatives that protect and stimulate the pollinating species and biodiversity."
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/29" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media/30"
+        }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=29" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "date": "2022-04-04T15:01:07",
+    "date_gmt": "2022-04-04T15:01:07",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=27"
+    },
+    "modified": "2022-04-15T11:34:59",
+    "modified_gmt": "2022-04-15T11:34:59",
+    "slug": "prison-for-profit",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/prison-for-profit/",
+    "title": { "rendered": "Prison For Profit" },
+    "template": "",
+    "acf": {
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/prisonforprofit01.jpeg",
+      "video_link": "https://player.vimeo.com/video/371168497",
+      "category": "documentary",
+      "main_rich_text": "<p>Whistleblowers, former prisoners and an investigative journalist paint a shocking picture of South Africa\u2019s first privatized prison. Priority for the controversial private security firm G4S is profit maximization, with underpaid guards and violence against prisoners as the inevitable result.</p>\n<p>What happens when governmental and intricate care tasks like detention and rehabilitation are left to market forces and powerful international uncontrolled corporations take over. A phenomenon often started through cost-cutting by governments.</p>\n<p>In Prison for Profit, we follow investigative journalist Ruth Hopkins and the lives of former prisoners and prison warders from South Africa\u2019s Mangaung private prison, which is run by the controversial private security firm G4S, a British multi-billion company active on a world-wide scale.</p>\n<p>Leaked video footage filmed by prison guards shows the violent face of this notorious private prison from the inside. We expose how this very violent system of profit maximization at a company like G4S works, how this multinational operates this prison and what the far-reaching negative consequences are for society.</p>\n",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/f85a96a0-5aad-4eb8-bc67-3bb1b07b89ca_car_202x158.jpg",
+      "short_description": "Whistleblowers, former prisoners and an investigative journalist paint a shocking picture of South Africa\u2019s first privatized prison."
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/27" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media/28"
+        }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=27" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 43,
+    "date": "2022-04-13T16:44:02",
+    "date_gmt": "2022-04-13T16:44:02",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=43"
+    },
+    "modified": "2022-04-15T11:42:26",
+    "modified_gmt": "2022-04-15T11:42:26",
+    "slug": "a-haunting-history",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/a-haunting-history/",
+    "title": { "rendered": "A Haunting History" },
+    "template": "",
+    "acf": {
+      "video_link": "https://player.vimeo.com/video/156436791",
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/c87b8e25-341d-411a-9688-717b786e847e_car_202x158.jpg",
+      "category": "documentary",
+      "main_rich_text": "<p>Haunted by his violent past, lawyer Anuol returns to his homeland South Sudan, committed to serve his country and hold accountable those responsible. But his quest hits a wall when he is confronted with reluctance to reconcile with history. The film was broadcasted by IKON Docs, distributed by Cinema Delicatessen and premiered at ONE World 2016.</p>\n",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/7193056d-7099-4c23-8889-01129c25ae66_car_202x158.jpg",
+      "short_description": "Haunted by his violent past, lawyer Anuol returns to his homeland South Sudan, committed to serve his country and hold accountable."
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/43" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=43" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "date": "2022-04-04T14:53:57",
+    "date_gmt": "2022-04-04T14:53:57",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=films&#038;p=25"
+    },
+    "modified": "2022-04-15T13:58:51",
+    "modified_gmt": "2022-04-15T13:58:51",
+    "slug": "daddy-and-the-warlord",
+    "status": "publish",
+    "type": "films",
+    "link": "http://2022.juliscapucin.com/films/daddy-and-the-warlord/",
+    "title": { "rendered": "Daddy And The Warlord" },
+    "template": "",
+    "acf": {
+      "image_1": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/daddyandthewarlord01.jpeg",
+      "video_link": "https://player.vimeo.com/video/337564327",
+      "image_2": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/76edb5b0-85a0-4b6d-b520-15e309cb4506_car_202x158.jpg",
+      "category": "documentary",
+      "main_rich_text": "<p>What if your dad might not be the hero you always imagined him to be? Clarice Gargard grew up with an idealized image of her father, but unresolved questions about his past now haunt her. Why did he collaborate with three corrupt government leaders in Liberia and with the infamous war criminal Charles Taylor? Did his job in communications imply spying and propaganda? Was he trying to help his country or was he simply after power, money and social status?</p>\n<p>Together with director Shamira Rapha\u00ebla, Gargard travels to postwar Liberia to uncover the truth about his activities. Interrogating her father and his former colleagues, she realizes the few answers she gets only make reality more elusive. With stylized mise-en-sc\u00e8ne and light games that reflect the multifaceted narrative, this captivating quest by a daughter to understand her parentage tells the sadly common story of faded ideals in time of war.</p>\n",
+      "short_description": "In postwar Liberia Clarice Gargard searches the truth concerning her father's dubious connection to warlord Charles Taylor.",
+      "film_details": "<p>documentary 2019<br />\ndirector SHAMIRA RAPHAELA<br />\nproducer DE FAMILIE<br />\nbroadcaster BNN/VARA<br />\npremiered nationally at Movies that Matter and internationally at Visions du R\u00e9el 2019<br />\nNFF Golden Calf Winner 2019</p>\n",
+      "film_credits": "<p>Director: Shamira Rapha\u00ebla<br />\nCo-director: Clarice Gargard<br />\nDOP: Jefrim Rothuizen<br />\nSound: Guido van Uden<br />\nMusic &amp; sounddesign: Jeroen Goeijers<br />\nEditing: Paul de Heer NCE<br />\nColor correction: Barend Onneweer<br />\nGraphic design:<br />\nLine producer: Merle Bemelmans<br />\nProducers: Michiel van Erp &amp; Monique Busman</p>\n<p>Broadcaster: BNN/VARA<br />\nCommissioning editor: Sjoerd van den Broek<br />\nSales Agent:<br />\nLength: 53&#8242;</p>\n<p>Festivals:<br />\nMovies that Matter &#8211; 2019 &#8211; Amsterdam<br />\n<span class=\"texteditor-inline-color\"><a href=\"https://www.visionsdureel.ch/en/2019/film/daddy-and-the-warlord\" target=\"_blank\" rel=\"noopener\">Visions du R\u00e9el</a>\u00a0</span>&#8211; 2019 &#8211; Switzerland<br />\nHot Docs 2019 &#8211; Canada</p>\n"
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films/25" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/films" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/films" }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media/26"
+        }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=25" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  }
+]

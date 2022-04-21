@@ -15,9 +15,10 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
         smoothMobile: false,
-        resetNativeScroll: true,
+        resetNativeScroll: false,
         direction: "horizontal",
-        multiplier: 1,
+        gestureDirection: "both",
+        multiplier: 0.8,
         scrollFromAnywhere: true,
       });
     });

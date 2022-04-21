@@ -13,13 +13,17 @@ function CategoriesMenu({
   const [selectedButton, setSelectedButton] = useState("all");
 
   const filmFilter = (category) => {
-    let filteredFilms = films.filter((item) => item.acf.category === category);
+    let filteredFilms = films.filter(
+      (item) => item.filmACF.category === category
+    );
     setActiveFilm(0);
     setFilmsArray(filteredFilms);
   };
 
   const projectAmount = (category) => {
-    let filteredFilms = films.filter((item) => item.acf.category === category);
+    let filteredFilms = films.filter(
+      (item) => item.filmACF.category === category
+    );
     return filteredFilms.length;
   };
 

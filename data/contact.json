@@ -1,0 +1,54 @@
+[
+  {
+    "id": 70,
+    "date": "2022-04-15T15:53:19",
+    "date_gmt": "2022-04-15T15:53:19",
+    "guid": {
+      "rendered": "http://2022.juliscapucin.com/?post_type=about&#038;p=70"
+    },
+    "modified": "2022-04-15T16:03:22",
+    "modified_gmt": "2022-04-15T16:03:22",
+    "slug": "about",
+    "status": "publish",
+    "type": "about",
+    "link": "http://2022.juliscapucin.com/about/about/",
+    "title": { "rendered": "About" },
+    "content": {
+      "rendered": "<p>I have been working as an editor on national and international filmprojects since 2004. I studied film at the School of Arts Utrecht, English<span class=\"texteditor-inline-fontsize\">\u00a0</span><span class=\"texteditor-inline-fontsize\">(University of Groningen)\u00a0</span>and Psychology <span class=\"texteditor-inline-fontsize\">(University of Groningen).</span></p>\n<p>I am an active member of the\u00a0<a href=\"http://www.cinemaeditors.nl/nl/\" target=\"_blank\" rel=\"noopener\">Netherlands association of Cinema Editors</a>\u00a0(<a href=\"http://www.cinemaeditors.nl/en/\" target=\"_blank\" rel=\"noopener\">NCE)</a><br />\nand the\u00a0<a href=\"https://daff.org/\" target=\"_blank\" rel=\"noopener\">Dutch Academy for Film</a>\u00a0(<a href=\"http://www.daff.org/\" target=\"_blank\" rel=\"noopener\">DAFF</a>).</p>\n<p>Don&#8217;t be shy to contact me. I&#8217;m always open to making something beautiful together.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>I have been working as an editor on national and international filmprojects since 2004. I studied film at the School of Arts Utrecht, English\u00a0(University of Groningen)\u00a0and Psychology (University of Groningen). I am an active member of the\u00a0Netherlands association of Cinema Editors\u00a0(NCE) and the\u00a0Dutch Academy for Film\u00a0(DAFF). Don&#8217;t be shy to contact me. I&#8217;m always open [&hellip;]</p>\n",
+      "protected": false
+    },
+    "featured_media": 71,
+    "template": "",
+    "acf": {
+      "text": "<p>I have been working as an editor on national and international filmprojects since 2004. I studied film at the School of Arts Utrecht, English<span class=\"texteditor-inline-fontsize\">\u00a0</span><span class=\"texteditor-inline-fontsize\">(University of Groningen)\u00a0</span>and Psychology <span class=\"texteditor-inline-fontsize\">(University of Groningen).</span></p>\n<p>I am an active member of the\u00a0<a href=\"http://www.cinemaeditors.nl/nl/\" target=\"_blank\" rel=\"noopener\">Netherlands association of Cinema Editors</a>\u00a0(<a href=\"http://www.cinemaeditors.nl/en/\" target=\"_blank\" rel=\"noopener\">NCE)</a><br />\nand the\u00a0<a href=\"https://daff.org/\" target=\"_blank\" rel=\"noopener\">Dutch Academy for Film</a>\u00a0(<a href=\"http://www.daff.org/\" target=\"_blank\" rel=\"noopener\">DAFF</a>).</p>\n<p>Don&#8217;t be shy to contact me. I&#8217;m always open to making something beautiful together.</p>\n",
+      "image": "http://2022.juliscapucin.com/wp-content/uploads/2022/04/Paul-de-Heer-1.jpeg"
+    },
+    "_links": {
+      "self": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/about/70" }
+      ],
+      "collection": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/about" }
+      ],
+      "about": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/types/about" }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media/71"
+        }
+      ],
+      "wp:attachment": [
+        { "href": "http://2022.juliscapucin.com/wp-json/wp/v2/media?parent=70" }
+      ],
+      "curies": [
+        { "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }
+      ]
+    }
+  }
+]

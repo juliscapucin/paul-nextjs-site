@@ -45,13 +45,13 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
     }
   }, [isOnScreen]);
 
-  const { title, acf } = film;
-  const { image_1, video_link, category } = acf;
+  const { title, filmACF } = film;
+  const { image1, videoLink, category } = filmACF;
 
   return category === "cover" ? (
     <article ref={ref} className={styles.coverWrapper}>
       <div className={styles.mainFilm}>
-        <VideoPlayer link={video_link} />
+        <VideoPlayer link={videoLink} />
       </div>
     </article>
   ) : (
@@ -67,8 +67,8 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
         <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}>
           <Image
             className={styles.img1}
-            src={image_1}
-            alt={title.rendered}
+            src={image1.sourceUrl}
+            alt={title}
             layout='fill'
             objectFit='cover'
             objectPosition='center center'
@@ -76,7 +76,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
           />
         </div>
         <div className={styles.img2Wrapper}>
-          <VideoPlayer link={video_link} />
+          <VideoPlayer link={videoLink} />
         </div>
       </div>
     </motion.article>
