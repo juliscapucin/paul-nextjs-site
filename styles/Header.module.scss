@@ -3,7 +3,7 @@
 .navbar {
   @extend %padding-all;
   width: 100%;
-  @extend %max-width;
+  // @extend %max-width;
   position: absolute;
   display: flex;
   justify-content: space-between;

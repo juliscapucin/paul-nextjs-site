@@ -40,8 +40,8 @@ export default function FilmListItem({ slug, filmACF, title, id }) {
             <div className={styles.imgContainer}>
               <Image
                 className={styles.img1}
-                src={filmACF.image_1}
-                alt={title.rendered}
+                src={filmACF.image1.sourceUrl}
+                alt={title}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center center'

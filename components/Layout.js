@@ -84,4 +84,5 @@ Layout.defaultProps = {
   title: "Paul de Heer | Film editor",
   description: "Here goes description for meta tag.",
   keywords: "film, filmmaking, edition",
+  link: "rel='icon' href='/favicon.ico'",
 };

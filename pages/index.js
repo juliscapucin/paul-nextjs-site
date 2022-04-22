@@ -1,12 +1,6 @@
-// import { API_URL } from "@/config/index";
-// import films from "../data/films.json";
-// import getFilms from "../data/getFilms";
-
 import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-
-import Head from "next/head";
 
 import Layout from "@/components/Layout";
 import FilmInfo from "@/components/FilmInfo";
@@ -40,13 +34,16 @@ export default function Home({ films }) {
   }, [activeFilm, filmsArray]);
 
   return (
-    <div className={styles.container}>
-      <Head>
+    <>
+      {/* <Head>
         <title>Paul de Heer | Film editor</title>
         <meta name='description' content='Paul de Heer | Film editor' />
         <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <Layout>
+      </Head> */}
+      <Layout
+        title='Paul de Heer | Film editor'
+        description='Paul de Heer | Film editor'
+      >
         <ul className={styles.filmCategories}>
           <CategoriesMenu
             setFilmsArray={setFilmsArray}
@@ -67,8 +64,12 @@ export default function Home({ films }) {
             />
           </AnimatePresence>
         </div>
-        <section ref={refScrollContainer} data-scroll-container>
-          <div className={styles.films}>
+        <div className={styles.filmsContainer}>
+          <section
+            ref={refScrollContainer}
+            data-scroll-container
+            className={styles.films}
+          >
             {filmsArray.map((film, index) => (
               <AnimatePresence exitBeforeEnter key={film.id}>
                 <FilmItem
@@ -80,19 +81,16 @@ export default function Home({ films }) {
                 />
               </AnimatePresence>
             ))}
-          </div>
-        </section>
+          </section>
+        </div>
       </Layout>
-    </div>
+    </>
   );
 }
 
 // GET STATIC PROPS
 // ----------------
 export async function getStaticProps() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
-  // const films = await res.json();
-
   const client = new ApolloClient({
     uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
     cache: new InMemoryCache(),
@@ -110,7 +108,6 @@ export async function getStaticProps() {
               credits
               fieldGroupName
               filmInfo
-              filmTitle
               image1 {
                 sourceUrl
               }
@@ -130,14 +127,3 @@ export async function getStaticProps() {
 
   return { props: { films: data.films.nodes } };
 }
-
-// GET SERVER SIDE PROPS
-// ---------------------
-// export const getServerSideProps = async () => {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
-//   const films = await res.json();
-
-//   console.log(films);
-
-//   return { props: { films: films } };
-// };

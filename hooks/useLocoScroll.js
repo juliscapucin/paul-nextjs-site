@@ -14,12 +14,22 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
       locoScroll = new locomotiveModule.default({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
-        smoothMobile: false,
         resetNativeScroll: false,
         direction: "horizontal",
         gestureDirection: "both",
         multiplier: 0.8,
         scrollFromAnywhere: true,
+        getDirection: true,
+        mobile: {
+          breakpoint: 0,
+          smooth: false,
+          getDirection: false,
+        },
+        tablet: {
+          breakpoint: 0,
+          smooth: false,
+          getDirection: false,
+        },
       });
     });
 

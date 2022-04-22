@@ -90,6 +90,20 @@ function CategoriesMenu({
         </p>
       </li>
       <li className={styles.filmCategoryItem}>
+        <button
+          onClick={() => {
+            setSelectedButton("trailer");
+            filmFilter("trailer");
+          }}
+          className={`${styles["trailer"]} ${
+            selectedButton === "trailer" ? styles["categoryActive"] : ""
+          }`}
+        >
+          Trailer
+        </button>
+        <p className={styles.filmProjectsAmount}>{projectAmount("trailer")}</p>
+      </li>
+      <li className={styles.filmCategoryItem}>
         <button>
           <Link href={link}>{listType}</Link>
         </button>

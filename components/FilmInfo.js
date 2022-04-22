@@ -47,21 +47,25 @@ export default function FilmInfo({
         exit='exit'
         className={styles.filmInfoContainer}
       >
-        <div className={styles.filmItemInfo} data-scroll-sticky>
-          <div className={styles.titleContainer}>
-            <motion.h1
-              variants={titleVariants}
-              className={styles.filmItemTitle}
-            >
-              {activeFilmName}
-            </motion.h1>
-          </div>
-          <p className={styles.filmItemShortdesc}>{activeFilmDescription}</p>
+        <Link href={`/films/${activeFilmSlug}`}>
+          <a>
+            <div className={styles.filmItemInfo} data-scroll-sticky>
+              <div className={styles.titleContainer}>
+                <motion.h1
+                  variants={titleVariants}
+                  className={styles.filmItemTitle}
+                >
+                  {activeFilmName}
+                </motion.h1>
+              </div>
+              <p className={styles.filmItemShortdesc}>
+                {activeFilmDescription}
+              </p>
 
-          <Link href={`/films/${activeFilmSlug}`}>
-            <a>View project</a>
-          </Link>
-        </div>
+              <h4>View project</h4>
+            </div>
+          </a>
+        </Link>
       </motion.div>
     )
   );

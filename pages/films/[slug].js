@@ -170,7 +170,6 @@ export async function getStaticProps({ params: { slug } }) {
               credits
               fieldGroupName
               filmInfo
-              filmTitle
               image1 {
                 sourceUrl
               }
