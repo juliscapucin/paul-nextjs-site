@@ -20,15 +20,11 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
         multiplier: 0.8,
         scrollFromAnywhere: true,
         getDirection: true,
-        mobile: {
-          breakpoint: 0,
+        smartphone: {
           smooth: false,
-          getDirection: false,
         },
         tablet: {
-          breakpoint: 0,
           smooth: false,
-          getDirection: false,
         },
       });
     });

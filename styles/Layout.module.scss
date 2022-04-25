@@ -2,8 +2,18 @@
 
 .mainContainer {
   max-width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
+  max-height: max-content;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: $screen-large) {
+  .mainContainer {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
 }
 
 /////////////////////////////////////////////////////////

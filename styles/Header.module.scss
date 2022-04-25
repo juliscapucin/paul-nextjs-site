@@ -1,14 +1,14 @@
 @import "./variables";
 
 .navbar {
-  @extend %padding-all;
+  padding: 1.5rem 2rem 0 2rem;
   width: 100%;
-  // @extend %max-width;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   margin: auto;
-  z-index: 100;
+  z-index: 10;
+  background-color: $clr-black;
 }
 
 .logoSpan {

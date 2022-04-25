@@ -1,10 +1,10 @@
 @import "./variables";
 
 .filmInfoContainer {
-  width: 40vw;
-  position: absolute;
+  width: 70vw;
+  position: fixed;
   right: 5vw;
-  bottom: 3rem;
+  bottom: 2rem;
   z-index: 200;
 }
 
@@ -29,5 +29,16 @@
   mix-blend-mode: multiply;
   color: rgb(235, 128, 66);
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: $screen-large) {
+  .filmInfoContainer {
+    width: 40vw;
+    right: 5vw;
+    bottom: 3rem;
+  }
+  .filmItemTitle {
+    margin-bottom: 2rem;
+  }
 }

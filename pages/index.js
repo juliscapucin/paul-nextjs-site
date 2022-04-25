@@ -64,24 +64,22 @@ export default function Home({ films }) {
             />
           </AnimatePresence>
         </div>
-        <div className={styles.filmsContainer}>
-          <section
-            ref={refScrollContainer}
-            data-scroll-container
-            className={styles.films}
-          >
-            {filmsArray.map((film, index) => (
-              <AnimatePresence exitBeforeEnter key={film.id}>
-                <FilmItem
-                  film={film}
-                  index={index}
-                  updateActiveFilm={(index) => {
-                    setActiveFilm(index);
-                  }}
-                />
-              </AnimatePresence>
-            ))}
-          </section>
+        <div
+          className={styles.filmsContainer}
+          ref={refScrollContainer}
+          data-scroll-container
+        >
+          {filmsArray.map((film, index) => (
+            <AnimatePresence exitBeforeEnter key={film.id}>
+              <FilmItem
+                film={film}
+                index={index}
+                updateActiveFilm={(index) => {
+                  setActiveFilm(index);
+                }}
+              />
+            </AnimatePresence>
+          ))}
         </div>
       </Layout>
     </>

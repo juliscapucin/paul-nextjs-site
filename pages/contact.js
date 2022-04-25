@@ -16,7 +16,9 @@ export default function Contact({ contact }) {
   return (
     <Layout title={"Contact"}>
       <div className={styles.container}>
-        <h1>Contact</h1>
+        <div className={styles.titleContainer}>
+          <h1>Contact</h1>
+        </div>
         <div className={styles.contactGrid}>
           <div
             className={styles.contactParagraph}

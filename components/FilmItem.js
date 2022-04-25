@@ -48,13 +48,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
   const { title, filmACF } = film;
   const { image1, videoLink, category } = filmACF;
 
-  return category === "cover" ? (
-    <article ref={ref} className={styles.coverWrapper}>
-      <div className={styles.mainFilm}>
-        <VideoPlayer link={videoLink} />
-      </div>
-    </article>
-  ) : (
+  return (
     <motion.article
       variants={containerVariants}
       initial='hidden'

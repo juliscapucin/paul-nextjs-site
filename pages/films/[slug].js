@@ -62,7 +62,9 @@ export default function Film({ film }) {
             />
           </div>
           <div className={styles.filmInfo}>
-            <h3>{shortDescription}</h3>
+            <div className={styles.shortDescription}>
+              <h3>{shortDescription}</h3>
+            </div>
             <div
               className={styles.filmDetails}
               dangerouslySetInnerHTML={{ __html: filmInfo }}
@@ -75,7 +77,7 @@ export default function Film({ film }) {
             dangerouslySetInnerHTML={{ __html: mainText }}
           />
 
-          <div className={styles.filmImg}>
+          <div className={styles.filmVideo}>
             <VideoPlayer link={videoLink} />
           </div>
 

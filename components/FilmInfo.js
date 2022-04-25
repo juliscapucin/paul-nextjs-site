@@ -39,34 +39,30 @@ export default function FilmInfo({
   activeFilmDescription,
 }) {
   return (
-    activeFilmSlug !== "cover" && (
-      <motion.div
-        variants={containerVariants}
-        initial='hidden'
-        animate='visible'
-        exit='exit'
-        className={styles.filmInfoContainer}
-      >
-        <Link href={`/films/${activeFilmSlug}`}>
-          <a>
-            <div className={styles.filmItemInfo} data-scroll-sticky>
-              <div className={styles.titleContainer}>
-                <motion.h1
-                  variants={titleVariants}
-                  className={styles.filmItemTitle}
-                >
-                  {activeFilmName}
-                </motion.h1>
-              </div>
-              <p className={styles.filmItemShortdesc}>
-                {activeFilmDescription}
-              </p>
-
-              <h4>View project</h4>
+    <motion.div
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+      className={styles.filmInfoContainer}
+    >
+      <Link href={`/films/${activeFilmSlug}`}>
+        <a>
+          <div className={styles.filmItemInfo} data-scroll-sticky>
+            <div className={styles.titleContainer}>
+              <motion.h1
+                variants={titleVariants}
+                className={styles.filmItemTitle}
+              >
+                {activeFilmName}
+              </motion.h1>
             </div>
-          </a>
-        </Link>
-      </motion.div>
-    )
+            <p className={styles.filmItemShortdesc}>{activeFilmDescription}</p>
+
+            <h4>View project</h4>
+          </div>
+        </a>
+      </Link>
+    </motion.div>
   );
 }
