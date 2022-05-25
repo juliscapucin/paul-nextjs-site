@@ -24,21 +24,21 @@
 }
 
 @media screen and (min-width: $screen-large) {
-  .filmsContainer {
-    height: 100vh;
-    max-width: max-content;
-    flex-direction: row;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  .films,
-  .allFilms {
-    flex-direction: row;
-  }
+  // .filmsContainer {
+  //   height: 100vh;
+  //   max-width: max-content;
+  //   flex-direction: row;
+  //   overflow-x: hidden;
+  //   overflow-y: hidden;
+  // }
+  // .films,
+  // .allFilms {
+  //   flex-direction: row;
+  // }
 
-  .filmCategories {
-    flex-direction: row;
-  }
+  // .filmCategories {
+  //   flex-direction: row;
+  // }
 }
 
 .filmInfo {

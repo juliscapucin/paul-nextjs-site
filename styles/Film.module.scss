@@ -7,31 +7,17 @@
   overflow-x: hidden;
   overflow-y: scroll;
   max-width: 100vw;
-
-  @media screen and (min-width: $screen-large) {
-    flex-direction: row;
-    height: 100vh;
-    max-width: max-content;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
 }
 
 .filmGrid {
   min-width: 100vw;
-  max-height: max-content;
   padding: 0 2rem;
-  display: flexbox;
 
   .filmImg1 {
+    margin: 3rem 0 0 0;
     position: relative;
     overflow: hidden;
-    height: clamp(30rem, 50vh, 70rem);
-
-    .img1 {
-      width: 100%;
-      height: 100%;
-    }
+    height: clamp(30rem, 80vh, 90rem);
   }
 
   .filmInfo {
@@ -53,29 +39,10 @@
   }
 
   @media screen and (min-width: $screen-large) {
-    max-height: 100vh;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr;
-
-    .filmHeader {
-      grid-area: 1 / 1 / span 2 / span 3;
-    }
-
-    .filmImg1 {
-      width: 60vw;
-
-      grid-area: 2 / 1 / span 2 / span 2;
-    }
-
     .filmInfo {
-      padding: 0 3rem;
-      width: 38vw;
-      grid-area: 2 / 2 / span 2 / span 2;
-
-      .filmDetails {
-        padding: 3rem 3rem;
+      .shortDescription {
+        width: 55%;
+        padding: 3rem 0;
       }
     }
   }
@@ -89,13 +56,16 @@
   .filmVideo {
     position: relative;
     width: 100%;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
   }
 
-  .filmImg {
+  .filmImg2 {
+    align-self: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     position: relative;
-    width: 100%;
-    height: clamp(30rem, 70vh, 70rem);
+    width: 50vw;
+    height: clamp(70rem, 70vh, 90rem);
   }
 
   .filmParagraph {
@@ -115,14 +85,17 @@
   }
 
   @media screen and (min-width: $screen-large) {
-    max-width: max-content;
-    flex-direction: row;
-
-    .filmImg {
+    .filmImg1 {
       width: 70vw;
     }
 
+    .filmImg2 {
+      width: 60vw;
+      height: 100vw;
+    }
+
     .filmParagraph {
+      align-self: flex-end;
       margin: 0 10rem;
       width: 40vw;
     }

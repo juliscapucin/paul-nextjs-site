@@ -1,6 +1,3 @@
-// import { NEXT_PUBLIC_API_URL } from "@/config/index";
-// import films from "../../data/films.json";
-
 import { useRouter } from "next/router";
 import React, { useRef } from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
@@ -85,7 +82,7 @@ export default function Film({ film }) {
             className={styles.filmCredits}
             dangerouslySetInnerHTML={{ __html: credits }}
           />
-          <div className={styles.filmImg}>
+          <div className={styles.filmImg2}>
             <Image
               className={styles.img2}
               src={image2.sourceUrl}
@@ -102,25 +99,9 @@ export default function Film({ film }) {
   );
 }
 
-// GET SERVER SIDE PROPS
-// ---------------------
-// export const getServerSideProps = async ({ query: { slug } }) => {
-//   const res = await fetch(
-//     `${process.env.NEXT_PUBLIC_API_URL}/films?slug=${slug}`
-//   );
-//   const films = await res.json();
-
-//   return { props: { film: films[0] } };
-// };
-
 // GET STATIC PATHS
 // ----------------
 export async function getStaticPaths() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/films`);
-  // const films = await res.json();
-
-  // const paths = films.map((film) => ({ params: { slug: film.slug } }));
-
   const client = new ApolloClient({
     uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
     cache: new InMemoryCache(),
@@ -150,11 +131,6 @@ export async function getStaticPaths() {
 // GET STATIC PROPS
 // ----------------
 export async function getStaticProps({ params: { slug } }) {
-  // const res = await fetch(
-  //   `${process.env.NEXT_PUBLIC_API_URL}/films?slug=${slug}`
-  // );
-  // const films = await res.json();
-
   const client = new ApolloClient({
     uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
     cache: new InMemoryCache(),
