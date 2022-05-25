@@ -18,7 +18,7 @@ export default function About({ about }) {
     <Layout title={"About"}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h1>About</h1>
+          <h1>About Me</h1>
         </div>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImg}>
