@@ -28,7 +28,8 @@ export default function Film({ film }) {
   const {
     mainText,
     image1,
-    image2,
+    image2Horizontal,
+    image2Vertical,
     shortDescription,
     filmInfo,
     videoLink,
@@ -73,19 +74,26 @@ export default function Film({ film }) {
             className={styles.filmParagraph}
             dangerouslySetInnerHTML={{ __html: mainText }}
           />
-
           <div className={styles.filmVideo}>
             <VideoPlayer link={videoLink} />
           </div>
-
           <div
             className={styles.filmCredits}
             dangerouslySetInnerHTML={{ __html: credits }}
           />
-          <div className={styles.filmImg2}>
+          <div
+            className={
+              image2Horizontal
+                ? styles.filmImg2Horizontal
+                : styles.filmImg2Vertical
+            }
+          >
             <Image
-              className={styles.img2}
-              src={image2.sourceUrl}
+              src={
+                image2Horizontal
+                  ? image2Horizontal.sourceUrl
+                  : image2Vertical.sourceUrl
+              }
               alt={title}
               layout='fill'
               objectFit='cover'
@@ -103,7 +111,7 @@ export default function Film({ film }) {
 // ----------------
 export async function getStaticPaths() {
   const client = new ApolloClient({
-    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    uri: "http://pauldeheer.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 
@@ -132,7 +140,7 @@ export async function getStaticPaths() {
 // ----------------
 export async function getStaticProps({ params: { slug } }) {
   const client = new ApolloClient({
-    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    uri: "http://pauldeheer.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 
@@ -151,7 +159,10 @@ export async function getStaticProps({ params: { slug } }) {
               image1 {
                 sourceUrl
               }
-              image2 {
+              image2Horizontal {
+                sourceUrl
+              }
+              image2Vertical {
                 sourceUrl
               }
               mainText

@@ -90,7 +90,7 @@ export default function Home({ films }) {
 // ----------------
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    uri: "http://pauldeheer.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 
@@ -109,7 +109,10 @@ export async function getStaticProps() {
               image1 {
                 sourceUrl
               }
-              image2 {
+              image2Horizontal {
+                sourceUrl
+              }
+              image2Vertical {
                 sourceUrl
               }
               mainText
@@ -123,5 +126,5 @@ export async function getStaticProps() {
     `,
   });
 
-  return { props: { films: data.films.nodes } };
+  return { props: { films: data.films.nodes }, revalidate: 1 };
 }

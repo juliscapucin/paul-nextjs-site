@@ -40,7 +40,7 @@ export async function getStaticProps() {
   // const about = await res.json();
 
   const client = new ApolloClient({
-    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    uri: "http://pauldeheer.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 

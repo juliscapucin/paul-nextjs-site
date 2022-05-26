@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     domains: [
       "images.unsplash.com",
-      "wp-content.taalmaatjesnederlands.nl",
+      "pauldeheer.wordpresssites.host",
       "next.config.js",
     ],
   },

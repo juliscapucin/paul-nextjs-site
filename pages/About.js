@@ -1,6 +1,3 @@
-// import { API_URL } from "@/config/index";
-// import about from "../data/about.json";
-
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import Image from "next/image";
@@ -18,7 +15,7 @@ export default function About({ about }) {
     <Layout title={"About"}>
       <div className={styles.container}>
         <div className={styles.titleContainer}>
-          <h1>About Me</h1>
+          <h1>About</h1>
         </div>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImg}>
@@ -45,11 +42,8 @@ export default function About({ about }) {
 // GET STATIC PROPS
 // ----------------
 export async function getStaticProps() {
-  // const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/about`);
-  // const about = await res.json();
-
   const client = new ApolloClient({
-    uri: "https://wp-content.taalmaatjesnederlands.nl/graphql",
+    uri: "http://pauldeheer.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 

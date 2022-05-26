@@ -59,29 +59,26 @@
     margin: 3rem 0;
   }
 
-  .filmImg2 {
+  .filmImg2Horizontal,
+  .filmImg2Vertical {
     align-self: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
     position: relative;
-    width: 50vw;
+    width: 90vw;
     height: clamp(70rem, 70vh, 90rem);
   }
 
   .filmParagraph {
     padding: 2rem 2rem;
     width: 100%;
-    p {
-      color: $clr-white;
-    }
+    color: $clr-white;
   }
 
   .filmCredits {
     margin: 0 0 3rem 2rem;
     width: 100%;
-    p {
-      color: $clr-white;
-    }
+    color: $clr-white;
   }
 
   @media screen and (min-width: $screen-large) {
@@ -89,9 +86,14 @@
       width: 70vw;
     }
 
-    .filmImg2 {
+    .filmImg2Horizontal {
+      width: 90vw;
+      height: 50vw;
+    }
+
+    .filmImg2Vertical {
       width: 60vw;
-      height: 100vw;
+      height: 90vw;
     }
 
     .filmParagraph {
