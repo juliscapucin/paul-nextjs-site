@@ -1,6 +1,3 @@
-// import { API_URL } from "@/config/index";
-// import contact from "../data/contact.json";
-
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import Layout from "@/components/Layout";

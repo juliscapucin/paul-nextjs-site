@@ -17,9 +17,9 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
         resetNativeScroll: false,
         // direction: "horizontal",
         // gestureDirection: "both",
-        multiplier: 0.8,
+        // getDirection: true,
+        multiplier: 0.2,
         scrollFromAnywhere: true,
-        getDirection: true,
         smartphone: {
           smooth: false,
         },

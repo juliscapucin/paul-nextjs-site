@@ -118,7 +118,7 @@ export async function getStaticPaths() {
   const { data } = await client.query({
     query: gql`
       query NewQuery {
-        films {
+        films(first: 50) {
           nodes {
             title
             slug
@@ -147,7 +147,7 @@ export async function getStaticProps({ params: { slug } }) {
   const { data } = await client.query({
     query: gql`
       query NewQuery {
-        films {
+        films(first: 50) {
           nodes {
             title
             slug

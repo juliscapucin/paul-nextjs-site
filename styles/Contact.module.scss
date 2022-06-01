@@ -13,11 +13,12 @@
   height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $gap;
+  gap: 2rem;
 }
 
 .contactParagraph {
   grid-area: 1 / 1 / span 1 / span 1;
+  width: 75%;
   p {
     color: $clr-white;
   }
@@ -25,4 +26,5 @@
 
 .contactMap {
   grid-area: 1 / 2 / span 1 / span 1;
+  height: 100%;
 }

@@ -58,7 +58,8 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
       className={styles.filmItemWrapper}
     >
       <div className={styles.filmItemGrid}>
-        <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}>
+        {/* <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}> */}
+        <div className={styles.img1Wrapper}>
           <Image
             className={styles.img1}
             src={image1.sourceUrl}

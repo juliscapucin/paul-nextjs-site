@@ -97,7 +97,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query NewQuery {
-        films {
+        films(first: 50) {
           nodes {
             title
             slug
