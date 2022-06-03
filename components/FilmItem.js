@@ -46,7 +46,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
   }, [isOnScreen]);
 
   const { title, filmACF } = film;
-  const { image1, videoLink, category } = filmACF;
+  const { image1, videoLink, category, alternativeImage } = filmACF;
 
   return (
     <motion.article
@@ -71,7 +71,19 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
           />
         </div>
         <div className={styles.img2Wrapper}>
-          <VideoPlayer link={videoLink} />
+          {videoLink ? (
+            <VideoPlayer link={videoLink} />
+          ) : (
+            <Image
+              className={styles.img2}
+              src={alternativeImage.sourceUrl}
+              alt={title}
+              layout='fill'
+              objectFit='cover'
+              objectPosition='center center'
+              priority='true'
+            />
+          )}
         </div>
       </div>
     </motion.article>

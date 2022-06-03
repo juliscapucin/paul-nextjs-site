@@ -118,6 +118,9 @@ export async function getStaticProps() {
               mainText
               shortDescription
               videoLink
+              alternativeImage {
+                sourceUrl
+              }
             }
             id
           }
