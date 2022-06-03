@@ -1,0 +1,52 @@
+/*
+=============== 
+Variables
+===============
+*/
+/*
+=============== 
+Color Mixins
+===============
+*/
+/*
+=============== 
+Spacer Mixins
+===============
+*/
+/*
+=============== 
+Container Mixins
+===============
+*/
+.filmCategories {
+  position: fixed;
+  top: 5rem;
+  left: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  z-index: 9;
+}
+
+.filmsContainer {
+  width: 100%;
+  padding: 10rem 2rem 5rem 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .filmsContainer {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+  }
+}
+/*# sourceMappingURL=Films.module.css.map */

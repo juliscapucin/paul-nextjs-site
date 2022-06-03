@@ -39,7 +39,7 @@
   .img2Wrapper {
     width: 100%;
     padding-top: 1rem;
-    grid-area: 3 / 4 / span 6 / span 7;
+    grid-area: 2 / 4 / span 4 / span 7;
   }
 
   @media screen and (min-width: $screen-large) {
@@ -48,7 +48,7 @@
       grid-area: 5 / 1 / span 3 / span 4;
     }
     .img2Wrapper {
-      grid-area: 2 / 5 / span 6 / span 7;
+      grid-area: 2 / 5 / span 5 / span 7;
     }
   }
 }

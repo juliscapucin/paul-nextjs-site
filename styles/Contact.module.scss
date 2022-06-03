@@ -1,8 +1,7 @@
 @import "./variables";
 
 .container {
-  padding: 8rem 2rem 0 2rem;
-  overflow: hidden;
+  padding: 8rem 2rem 2rem 2rem;
 }
 
 .titleContainer {
@@ -11,20 +10,46 @@
 
 .contactGrid {
   height: 70vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .contactParagraph {
-  grid-area: 1 / 1 / span 1 / span 1;
-  width: 75%;
   p {
     color: $clr-white;
   }
 }
 
 .contactMap {
-  grid-area: 1 / 2 / span 1 / span 1;
   height: 100%;
+  margin: 3rem auto;
+}
+
+/*
+=============== 
+Desktop
+===============
+*/
+
+@media screen and (min-width: $screen-large) {
+  .contactGrid {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .contactParagraph {
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 75%;
+    p {
+      color: $clr-white;
+    }
+  }
+
+  .contactMap {
+    grid-area: 1 / 2 / span 1 / span 1;
+    height: 100%;
+    margin: 0;
+  }
 }

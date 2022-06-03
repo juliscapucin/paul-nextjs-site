@@ -5,7 +5,7 @@
   position: fixed;
   right: 5vw;
   bottom: 2rem;
-  z-index: 200;
+  z-index: 20;
 }
 
 .filmItemInfo {
@@ -30,6 +30,10 @@
   color: rgb(235, 128, 66);
   display: inline-block;
   margin-bottom: 1rem;
+  transition: $transition;
+  &:hover {
+    color: $clr-white;
+  }
 }
 
 @media screen and (min-width: $screen-large) {

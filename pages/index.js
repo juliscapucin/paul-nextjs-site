@@ -15,7 +15,7 @@ import styles from "@/styles/Home.module.scss";
 // ----
 export default function Home({ films }) {
   const [filmsArray, setFilmsArray] = useState(films);
-  const [activeFilm, setActiveFilm] = useState(1);
+  const [activeFilm, setActiveFilm] = useState(0);
   const [activeFilmName, setActiveFilmName] = useState("");
   const [activeFilmSlug, setActiveFilmSlug] = useState("");
   const [activeFilmDescription, setActiveFilmDescription] = useState("");
@@ -25,6 +25,10 @@ export default function Home({ films }) {
   const filmsArrayLength = filmsArray.length;
 
   useLocoScroll(refScrollContainer, filmsArrayLength);
+
+  useEffect(() => {
+    setActiveFilm(1);
+  }, []);
 
   useEffect(() => {
     let filmData = filmsArray.filter((item, index) => index === activeFilm);

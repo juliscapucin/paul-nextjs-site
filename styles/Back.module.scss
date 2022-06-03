@@ -1,0 +1,16 @@
+@import "./variables";
+
+.backContainer {
+  position: fixed;
+  top: 5rem;
+  left: 2rem;
+  z-index: 12;
+}
+
+.back {
+  color: $clr-tint;
+  transition: $transition;
+  &:hover {
+    color: white;
+  }
+}

@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import Layout from "@/components/Layout";
 import VideoPlayer from "@/components/VideoPlayer";
+import Back from "@/components/Back";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
@@ -37,73 +38,80 @@ export default function Film({ film }) {
   } = filmACF;
 
   return (
-    <Layout title={"Film"}>
-      <div
-        className={styles.container}
-        ref={refScrollContainer}
-        data-scroll-container
-      >
-        <div className={styles.filmGrid}>
-          <div className={styles.filmHeader}>
-            <h1>{title}</h1>
-            <Link href='/films'>Back to Films</Link>
+    <>
+      <Back />
+      <Layout title={"Film"}>
+        <div
+          className={styles.container}
+          ref={refScrollContainer}
+          data-scroll-container
+        >
+          <div className={styles.filmGrid}>
+            <div className={styles.filmHeader}>
+              <h1>{title}</h1>
+            </div>
+            <div className={styles.filmImg1}>
+              <Image
+                className={styles.img1}
+                src={image1.sourceUrl}
+                alt={title}
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center center'
+                priority='true'
+              />
+            </div>
+            <div className={styles.filmInfo}>
+              <div className={styles.shortDescription}>
+                <h3>{shortDescription}</h3>
+              </div>
+              <div
+                className={styles.filmDetails}
+                dangerouslySetInnerHTML={{ __html: filmInfo }}
+              />
+            </div>
           </div>
-          <div className={styles.filmImg1}>
-            <Image
-              className={styles.img1}
-              src={image1.sourceUrl}
-              alt={title}
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center center'
-              priority='true'
+          <div className={styles.filmFlex}>
+            <div
+              className={styles.filmParagraph}
+              dangerouslySetInnerHTML={{ __html: mainText }}
             />
-          </div>
-          <div className={styles.filmInfo}>
-            <div className={styles.shortDescription}>
-              <h3>{shortDescription}</h3>
+            {videoLink && (
+              <div className={styles.filmVideo}>
+                <VideoPlayer link={videoLink} />
+              </div>
+            )}
+            <div className={styles.filmCreditsContainer}>
+              <h4>Credits</h4>
+              <div
+                className={styles.filmCredits}
+                dangerouslySetInnerHTML={{ __html: credits }}
+              />
             </div>
             <div
-              className={styles.filmDetails}
-              dangerouslySetInnerHTML={{ __html: filmInfo }}
-            />
-          </div>
-        </div>
-        <div className={styles.filmFlex}>
-          <div
-            className={styles.filmParagraph}
-            dangerouslySetInnerHTML={{ __html: mainText }}
-          />
-          <div className={styles.filmVideo}>
-            <VideoPlayer link={videoLink} />
-          </div>
-          <div
-            className={styles.filmCredits}
-            dangerouslySetInnerHTML={{ __html: credits }}
-          />
-          <div
-            className={
-              image2Horizontal
-                ? styles.filmImg2Horizontal
-                : styles.filmImg2Vertical
-            }
-          >
-            <Image
-              src={
+              className={
                 image2Horizontal
-                  ? image2Horizontal.sourceUrl
-                  : image2Vertical.sourceUrl
+                  ? styles.filmImg2Horizontal
+                  : styles.filmImg2Vertical
               }
-              alt={title}
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center center'
-              priority='true'
-            />
+            >
+              <Image
+                src={
+                  image2Horizontal
+                    ? image2Horizontal.sourceUrl
+                    : image2Vertical.sourceUrl
+                }
+                alt={title}
+                layout='fill'
+                objectFit='cover'
+                objectPosition='center center'
+                priority='true'
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }
 

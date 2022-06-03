@@ -2,7 +2,7 @@
 
 .filmCategoryItem {
   display: flex;
-  margin: 0 0.5rem;
+  margin: 0.1rem 0 0 4rem;
   color: $clr-white;
   height: 20px;
   padding: 0 0.4rem;
@@ -14,16 +14,18 @@
 }
 
 .filmProjectsAmount {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: $clr-white;
+  margin-left: 0.2rem;
 }
 
 .all,
 .documentary,
 .fiction,
 .commercial,
-.trailer {
-  padding: 0 0.2rem;
+.trailer,
+.listType {
+  padding: 0 1px;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: border 0.5s linear;
   &.categoryActive {

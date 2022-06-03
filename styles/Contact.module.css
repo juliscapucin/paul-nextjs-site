@@ -1,0 +1,84 @@
+/*
+=============== 
+Variables
+===============
+*/
+/*
+=============== 
+Color Mixins
+===============
+*/
+/*
+=============== 
+Spacer Mixins
+===============
+*/
+/*
+=============== 
+Container Mixins
+===============
+*/
+.container {
+  padding: 8rem 2rem 0 2rem;
+}
+
+.titleContainer {
+  margin-bottom: 2rem;
+}
+
+.contactGrid {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactParagraph p {
+  color: #e9e1e1;
+}
+
+.contactMap {
+  height: 100%;
+  margin: 3rem auto;
+}
+
+/*
+=============== 
+Desktop
+===============
+*/
+@media screen and (min-width: 900px) {
+  .contactGrid {
+    height: 70vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .contactParagraph {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / span 1 / span 1;
+    width: 75%;
+  }
+  .contactParagraph p {
+    color: #e9e1e1;
+  }
+  .contactMap {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / span 1 / span 1;
+    height: 100%;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=Contact.module.css.map */

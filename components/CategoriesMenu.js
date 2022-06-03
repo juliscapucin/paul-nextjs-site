@@ -104,7 +104,7 @@ function CategoriesMenu({
         <p className={styles.filmProjectsAmount}>{projectAmount("trailer")}</p>
       </li>
       <li className={styles.filmCategoryItem}>
-        <button>
+        <button className={styles.listType}>
           <Link href={link}>{listType}</Link>
         </button>
       </li>

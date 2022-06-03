@@ -7,6 +7,12 @@
   overflow-x: hidden;
   overflow-y: scroll;
   max-width: 100vw;
+  position: relative;
+}
+
+.backBtn {
+  position: fixed;
+  top: 10rem;
 }
 
 .filmGrid {
@@ -75,11 +81,17 @@
     color: $clr-white;
   }
 
-  .filmCredits {
-    margin: 0 0 3rem 2rem;
+  .filmCreditsContainer {
+    margin: 3rem 0 3rem 2rem;
     width: 100%;
     color: $clr-white;
   }
+
+  // .filmCredits {
+  //   margin: 0 0 3rem 2rem;
+  //   width: 100%;
+  //   color: $clr-white;
+  // }
 
   @media screen and (min-width: $screen-large) {
     .filmImg1 {

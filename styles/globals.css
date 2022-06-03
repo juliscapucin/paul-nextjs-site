@@ -4,7 +4,6 @@
   --text-black: rgba(17, 24, 39, 1);
   --text-white: rgba(229, 231, 235, 1);
 } */
-
 /* 
 Breakpoints: 
 -----------
@@ -14,65 +13,85 @@ lg: min-width: 1024px; //large device
 xlg: min-width: 1280px; //extra large device
 2xl: min-width: 1536px; //2x extra large device
 */
-
 /*
 =============== 
 Fonts
 ===============
 */
-// @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
 @import url("https://use.typekit.net/lcs4ric.css");
-
 /*
 =============== 
 Variables
 ===============
 */
-
-@import "./variables";
-
+/*
+=============== 
+Variables
+===============
+*/
+/*
+=============== 
+Color Mixins
+===============
+*/
+/*
+=============== 
+Spacer Mixins
+===============
+*/
+/*
+=============== 
+Container Mixins
+===============
+*/
 /*
 =============== 
 Global Styles
 ===============
 */
-
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 body {
-  font-family: $ff-secondary;
-  background-color: $clr-black;
+  font-family: "acumin-pro", sans-serif;
+  background-color: #222;
   line-height: 1.5;
   font-size: clamp(0.875rem, 2vw, 1rem);
   font-weight: 300;
   letter-spacing: 0.01vw;
   overscroll-behavior: none;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   font-weight: 700;
   text-decoration: none;
-  color: $clr-tint;
-  transition: $transition;
-  // Style for react-router <NavLink />
-  &.active {
-    color: #999;
-  }
+  color: #eb8042;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
+
+a.active {
+  color: #999;
+}
+
 a:hover {
-  color: $clr-white;
+  color: #e9e1e1;
 }
 
 img {
   display: block;
 }
+
 button,
 button:focus {
   font-size: clamp(0.7rem, 1vw, 0.8rem);
@@ -80,8 +99,6 @@ button:focus {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  // border-radius: 25% 10%;
-  // border-radius: 10px;
 }
 
 button:active {
@@ -93,30 +110,35 @@ h1,
 h2,
 h3,
 h4 {
-  // text-transform: capitalize;
   line-height: 1.2;
   margin-bottom: 0.75rem;
-  font-family: $ff-primary;
+  font-family: "acumin-pro", sans-serif;
   font-weight: 800;
 }
+
 h1 {
   font-size: clamp(3.8rem, 6.5vw, 13rem);
-  color: $clr-white;
+  color: #e9e1e1;
   line-height: 0.8;
 }
+
 h2 {
   font-size: clamp(2.5rem, 4vw, 3rem);
-  color: $clr-tint;
+  color: #eb8042;
 }
+
 h3 {
   font-size: clamp(1.2rem, 3vw, 2rem);
-  color: $clr-tint;
+  color: #eb8042;
 }
+
 h4 {
   font-size: clamp(0.875rem, 2vw, 1rem);
 }
+
 p {
   margin-bottom: 1.25rem;
   font-weight: 200;
-  color: $clr-white;
+  color: #e9e1e1;
 }
+/*# sourceMappingURL=globals.css.map */

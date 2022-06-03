@@ -1,0 +1,149 @@
+/*
+=============== 
+Variables
+===============
+*/
+/*
+=============== 
+Color Mixins
+===============
+*/
+/*
+=============== 
+Spacer Mixins
+===============
+*/
+/*
+=============== 
+Container Mixins
+===============
+*/
+.container {
+  padding-top: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-width: 100vw;
+  position: relative;
+}
+
+.backBtn {
+  position: fixed;
+  top: 10rem;
+}
+
+.filmGrid {
+  min-width: 100vw;
+  padding: 0 2rem;
+}
+
+.filmGrid .filmImg1 {
+  margin: 3rem 0 0 0;
+  position: relative;
+  overflow: hidden;
+  height: clamp(30rem, 80vh, 90rem);
+}
+
+.filmGrid .filmInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0rem 0rem;
+}
+
+.filmGrid .filmInfo .shortDescription {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.filmGrid .filmInfo p {
+  color: #e9e1e1;
+}
+
+.filmGrid .filmInfo .filmDetails {
+  padding: 0rem 0rem;
+}
+
+@media screen and (min-width: 900px) {
+  .filmGrid .filmInfo .shortDescription {
+    width: 55%;
+    padding: 3rem 0;
+  }
+}
+
+.filmFlex {
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filmFlex .filmVideo {
+  position: relative;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.filmFlex .filmImg2Horizontal,
+.filmFlex .filmImg2Vertical {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 90vw;
+  height: clamp(70rem, 70vh, 90rem);
+}
+
+.filmFlex .filmParagraph {
+  padding: 2rem 2rem;
+  width: 100%;
+  color: #e9e1e1;
+}
+
+.filmFlex .filmCredits {
+  margin: 0 0 3rem 2rem;
+  width: 100%;
+  color: #e9e1e1;
+}
+
+@media screen and (min-width: 900px) {
+  .filmFlex .filmImg1 {
+    width: 70vw;
+  }
+  .filmFlex .filmImg2Horizontal {
+    width: 90vw;
+    height: 50vw;
+  }
+  .filmFlex .filmImg2Vertical {
+    width: 60vw;
+    height: 90vw;
+  }
+  .filmFlex .filmParagraph {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 10rem;
+    width: 40vw;
+  }
+  .filmFlex .filmCredits {
+    margin: 0 0 0 10rem;
+    width: 50vw;
+  }
+}
+/*# sourceMappingURL=Film.module.css.map */
