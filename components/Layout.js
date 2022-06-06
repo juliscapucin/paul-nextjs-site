@@ -1,9 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 
 import Header from "./Header";
-// import Back from "./Back";
+import { AppProvider } from "@/data/context";
 
 import styles from "@/styles/Layout.module.scss";
 
@@ -74,9 +75,12 @@ export default function Layout({ title, keywords, description, children }) {
       </Head>
 
       <div className={styles.mainContainer}>
-        <Header />
-        {/* <Back /> */}
-        {children}
+        <React.StrictMode>
+          <AppProvider>
+            <Header />
+            {children}
+          </AppProvider>
+        </React.StrictMode>
       </div>
     </motion.div>
   );

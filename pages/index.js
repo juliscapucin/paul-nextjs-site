@@ -7,6 +7,8 @@ import FilmInfo from "@/components/FilmInfo";
 import FilmItem from "@/components/FilmItem";
 import CategoriesMenu from "@/components/CategoriesMenu";
 
+import { AppProvider } from "@/data/context";
+
 import useLocoScroll from "@/hooks/useLocoScroll";
 
 import styles from "@/styles/Home.module.scss";

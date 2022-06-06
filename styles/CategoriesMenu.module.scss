@@ -1,8 +1,21 @@
 @import "./variables";
 
+.categoriesSubmenu {
+  opacity: 0%;
+  transition: $transition;
+  background-color: $clr-black;
+  margin-right: 2rem;
+  height: 6rem;
+  display: flex;
+  align-items: flex-end;
+  &.showCategoriesSubmenu {
+    opacity: 100%;
+  }
+}
+
 .filmCategoryItem {
   display: flex;
-  margin: 0.1rem 0 0 4rem;
+  margin: 0.1rem 0 0 1rem;
   color: $clr-white;
   height: 20px;
   padding: 0 0.4rem;

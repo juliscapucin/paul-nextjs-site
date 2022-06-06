@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { useGlobalContext } from "@/data/context";
 import styles from "@/styles/CategoriesMenu.module.scss";
 
 function CategoriesMenu({
@@ -10,6 +11,7 @@ function CategoriesMenu({
   listType,
   link,
 }) {
+  const { isSubmenuOpen, setIsSubmenuOpen } = useGlobalContext();
   const [selectedButton, setSelectedButton] = useState("all");
 
   const filmFilter = (category) => {
@@ -28,7 +30,12 @@ function CategoriesMenu({
   };
 
   return (
-    <>
+    <aside
+      className={`${styles["categoriesSubmenu"]} ${
+        isSubmenuOpen && styles["showCategoriesSubmenu"]
+      }`}
+      onMouseLeave={() => setIsSubmenuOpen(false)}
+    >
       <li className={styles.filmCategoryItem}>
         <button
           onClick={() => {
@@ -108,7 +115,7 @@ function CategoriesMenu({
           <Link href={link}>{listType}</Link>
         </button>
       </li>
-    </>
+    </aside>
   );
 }
 

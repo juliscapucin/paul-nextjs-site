@@ -9,6 +9,7 @@ const VideoPlayer = ({ link }) => (
       url={link}
       className={styles.reactPlayer}
       playing
+      playsinline
       width='100%'
       height='100%'
       controls={false}
