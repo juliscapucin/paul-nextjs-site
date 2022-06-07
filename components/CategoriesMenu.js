@@ -66,7 +66,7 @@ function CategoriesMenu({
           {projectAmount("documentary")}
         </p>
       </li>
-      <li className={styles.filmCategoryItem}>
+      {/* <li className={styles.filmCategoryItem}>
         <button
           onClick={() => {
             setSelectedButton("fiction");
@@ -79,7 +79,7 @@ function CategoriesMenu({
           Fiction
         </button>
         <p className={styles.filmProjectsAmount}>{projectAmount("fiction")}</p>
-      </li>
+      </li> */}
       <li className={styles.filmCategoryItem}>
         <button
           onClick={() => {
@@ -96,7 +96,7 @@ function CategoriesMenu({
           {projectAmount("commercial")}
         </p>
       </li>
-      <li className={styles.filmCategoryItem}>
+      {/* <li className={styles.filmCategoryItem}>
         <button
           onClick={() => {
             setSelectedButton("trailer");
@@ -109,7 +109,7 @@ function CategoriesMenu({
           Trailer
         </button>
         <p className={styles.filmProjectsAmount}>{projectAmount("trailer")}</p>
-      </li>
+      </li> */}
       <li className={styles.filmCategoryItem}>
         <button className={styles.listType}>
           <Link href={link}>{listType}</Link>
