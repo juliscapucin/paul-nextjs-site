@@ -16,6 +16,9 @@ const VideoPlayer = ({ link }) => (
       muted={true}
       loop={true}
     />
+    <div className={styles.playerUnderlay}>
+      <h5 className={styles.loadingVideo}>Loading video...</h5>
+    </div>
   </div>
 );
 

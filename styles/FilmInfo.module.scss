@@ -26,10 +26,9 @@
 }
 
 .filmItemTitle {
-  mix-blend-mode: multiply;
-  color: rgb(235, 128, 66);
+  color: $clr-tint;
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   transition: $transition;
   &:hover {
     color: $clr-white;
@@ -41,8 +40,5 @@
     width: 40vw;
     right: 5vw;
     bottom: 3rem;
-  }
-  .filmItemTitle {
-    margin-bottom: 2rem;
   }
 }

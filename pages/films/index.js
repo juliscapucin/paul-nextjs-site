@@ -52,7 +52,7 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query NewQuery {
-        films {
+        films(first: 50) {
           nodes {
             title
             slug
@@ -73,6 +73,9 @@ export async function getStaticProps() {
               mainText
               shortDescription
               videoLink
+              alternativeImage {
+                sourceUrl
+              }
             }
             id
           }
@@ -81,5 +84,5 @@ export async function getStaticProps() {
     `,
   });
 
-  return { props: { films: data.films.nodes } };
+  return { props: { films: data.films.nodes }, revalidate: 1 };
 }
