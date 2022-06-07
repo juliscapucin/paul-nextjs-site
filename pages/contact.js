@@ -3,6 +3,8 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Layout from "@/components/Layout";
 import Map from "@/components/Map";
 
+import useLocoScroll from "@/hooks/useLocoScroll";
+
 import styles from "@/styles/Contact.module.scss";
 
 // CONTACT
@@ -10,9 +12,11 @@ import styles from "@/styles/Contact.module.scss";
 export default function Contact({ contact }) {
   const { contactText } = contact;
 
+  useLocoScroll();
+
   return (
     <Layout title={"Contact"}>
-      <div className={styles.container}>
+      <div className={styles.container} data-scroll-container>
         <div className={styles.titleContainer}>
           <h1>Contact</h1>
         </div>

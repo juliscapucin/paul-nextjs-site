@@ -24,9 +24,9 @@ export default function Home({ films }) {
   const refScrollContainer = useRef(null);
 
   // Define size of scroll container
-  const filmsArrayLength = filmsArray.length;
+  // const filmsArrayLength = filmsArray.length;
 
-  useLocoScroll(refScrollContainer, filmsArrayLength);
+  useLocoScroll();
 
   useEffect(() => {
     setActiveFilm(1);

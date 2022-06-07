@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 // import "@/styles/locoScroll.module.scss";
 
-function useLocoScroll(refScrollContainer, filmsArrayLength) {
+function useLocoScroll() {
   useEffect(() => {
     // if (!start) return;
 
-    const windowWidth = window.innerWidth;
-    const containerWidth = windowWidth * filmsArrayLength;
-    refScrollContainer.current.style.width = `${containerWidth}px`;
+    // const windowWidth = window.innerWidth;
+    // const containerWidth = windowWidth * filmsArrayLength;
+    // refScrollContainer.current.style.width = `${containerWidth}px`;
 
     let locoScroll;
     import("locomotive-scroll").then((locomotiveModule) => {
@@ -35,7 +35,7 @@ function useLocoScroll(refScrollContainer, filmsArrayLength) {
         locoScroll = null;
       }
     };
-  }, [refScrollContainer, filmsArrayLength]);
+  }, []);
 }
 
 export default useLocoScroll;

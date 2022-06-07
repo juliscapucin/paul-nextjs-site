@@ -4,6 +4,8 @@ import Image from "next/image";
 
 import Layout from "@/components/Layout";
 
+import useLocoScroll from "@/hooks/useLocoScroll";
+
 import styles from "@/styles/About.module.scss";
 
 // ABOUT
@@ -11,9 +13,11 @@ import styles from "@/styles/About.module.scss";
 export default function About({ about }) {
   const { aboutText, aboutImage } = about;
 
+  useLocoScroll();
+
   return (
     <Layout title={"About"}>
-      <div className={styles.container}>
+      <div className={styles.container} data-scroll-container>
         <div className={styles.titleContainer}>
           <h1>About</h1>
         </div>
