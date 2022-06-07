@@ -51,7 +51,7 @@ export default function Film({ film }) {
               <h1>{title}</h1>
             </div>
             <div className={styles.filmImg1}>
-              <Image
+              {/* <Image
                 className={styles.img1}
                 src={image1.sourceUrl}
                 alt={title}
@@ -59,7 +59,8 @@ export default function Film({ film }) {
                 objectFit='cover'
                 objectPosition='center center'
                 priority='true'
-              />
+              /> */}
+              <img src={image1.sourceUrl} alt={title} />
             </div>
             <div className={styles.filmInfo}>
               <div className={styles.shortDescription}>
@@ -95,7 +96,7 @@ export default function Film({ film }) {
                   : styles.filmImg2Vertical
               }
             >
-              <Image
+              {/* <Image
                 src={
                   image2Horizontal
                     ? image2Horizontal.sourceUrl
@@ -106,6 +107,14 @@ export default function Film({ film }) {
                 objectFit='cover'
                 objectPosition='center center'
                 priority='true'
+              /> */}
+              <img
+                src={
+                  image2Horizontal
+                    ? image2Horizontal.sourceUrl
+                    : image2Vertical.sourceUrl
+                }
+                alt={title}
               />
             </div>
           </div>

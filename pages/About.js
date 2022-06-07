@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-import Image from "next/image";
+// import Image from "next/image";
 
 import Layout from "@/components/Layout";
 
@@ -23,7 +23,7 @@ export default function About({ about }) {
         </div>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImg}>
-            <Image
+            {/* <Image
               className={styles.img}
               src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'
@@ -31,6 +31,11 @@ export default function About({ about }) {
               objectFit='cover'
               objectPosition='center center'
               priority='true'
+            /> */}
+            <img
+              src={aboutImage.sourceUrl}
+              alt='Paul-de-Heer'
+              className={styles.img}
             />
           </div>
           <div
