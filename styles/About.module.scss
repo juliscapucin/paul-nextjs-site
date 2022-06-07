@@ -35,7 +35,7 @@
     height: max-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 8rem;
   }
   .aboutImg {
     grid-area: 1 / 1 / span 1 / span 1;
@@ -43,5 +43,6 @@
   }
   .aboutParagraph {
     grid-area: 1 / 2 / span 1 / span 1;
+    width: 70%;
   }
 }

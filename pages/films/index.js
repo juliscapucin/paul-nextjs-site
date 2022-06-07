@@ -6,6 +6,8 @@ import Layout from "@/components/Layout";
 import CategoriesMenu from "@/components/CategoriesMenu";
 import FilmListItem from "@/components/FilmListItem";
 
+import useLocoScroll from "@/hooks/useLocoScroll";
+
 import styles from "@/styles/Films.module.scss";
 
 // FILMS
@@ -13,6 +15,8 @@ import styles from "@/styles/Films.module.scss";
 export default function Films({ films }) {
   const [filmsArray, setFilmsArray] = useState(films);
   const [activeFilm, setActiveFilm] = useState(1);
+
+  useLocoScroll();
 
   return (
     <Layout title={"Films"}>
@@ -25,7 +29,7 @@ export default function Films({ films }) {
           link={"/"}
         />
       </ul>
-      <div className={styles.filmsContainer}>
+      <div className={styles.filmsContainer} data-scroll-container>
         {filmsArray.length === 0 && <div>No Films to show...</div>}
         {filmsArray.map((film) => {
           if (film.filmACF.category !== "cover") {
