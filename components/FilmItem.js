@@ -56,6 +56,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
       exit='exit'
       ref={ref}
       className={styles.filmItemWrapper}
+      style={{ opacity: 0 }}
     >
       <div className={styles.filmItemGrid}>
         {/* <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}> */}
@@ -67,7 +68,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
             layout='fill'
             objectFit='cover'
             objectPosition='center center'
-            priority='true'
+            priority
           />
         </div>
         <div className={styles.img2Wrapper}>
@@ -81,7 +82,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
               layout='fill'
               objectFit='cover'
               objectPosition='center center'
-              priority='true'
+              priority
             />
           )}
         </div>

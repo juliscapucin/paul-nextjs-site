@@ -2,11 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "images.unsplash.com",
-      "pauldeheer.wordpresssites.host",
-      "next.config.js",
-    ],
+    domains: ["pauldeheer.wordpresssites.host", "next.config.js"],
   },
 };
 

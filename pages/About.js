@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-// import Image from "next/image";
+import Image from "next/image";
 
 import Layout from "@/components/Layout";
 
@@ -17,26 +17,30 @@ export default function About({ about }) {
 
   return (
     <Layout title={"About"}>
-      <div className={styles.container} data-scroll-container>
+      <div
+        className={styles.container}
+        style={{ opacity: 0 }}
+        data-scroll-container
+      >
         <div className={styles.titleContainer}>
           <h1>About</h1>
         </div>
         <div className={styles.aboutGrid}>
           <div className={styles.aboutImg}>
-            {/* <Image
+            <Image
               className={styles.img}
               src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'
               layout='fill'
               objectFit='cover'
               objectPosition='center center'
-              priority='true'
-            /> */}
-            <img
+              priority
+            />
+            {/* <img
               src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'
               className={styles.img}
-            />
+            /> */}
           </div>
           <div
             className={styles.aboutParagraph}

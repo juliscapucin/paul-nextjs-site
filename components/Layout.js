@@ -12,9 +12,8 @@ const opacityTransitionVariants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.2, when: "beforeChildren" },
   },
-  exit: { opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } },
+  exit: { opacity: 1 },
 };
 
 const transitionContainerVariants = {

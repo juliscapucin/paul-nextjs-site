@@ -43,6 +43,7 @@ export default function Film({ film }) {
       <Layout title={"Film"}>
         <div
           className={styles.container}
+          style={{ opacity: 0 }}
           ref={refScrollContainer}
           data-scroll-container
         >
@@ -51,16 +52,16 @@ export default function Film({ film }) {
               <h1>{title}</h1>
             </div>
             <div className={styles.filmImg1}>
-              {/* <Image
+              <Image
                 className={styles.img1}
                 src={image1.sourceUrl}
                 alt={title}
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center center'
-                priority='true'
-              /> */}
-              <img src={image1.sourceUrl} alt={title} />
+                priority
+              />
+              {/* <img src={image1.sourceUrl} alt={title} /> */}
             </div>
             <div className={styles.filmInfo}>
               <div className={styles.shortDescription}>
@@ -96,7 +97,7 @@ export default function Film({ film }) {
                   : styles.filmImg2Vertical
               }
             >
-              {/* <Image
+              <Image
                 src={
                   image2Horizontal
                     ? image2Horizontal.sourceUrl
@@ -106,16 +107,16 @@ export default function Film({ film }) {
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center center'
-                priority='true'
-              /> */}
-              <img
+                priority
+              />
+              {/* <img
                 src={
                   image2Horizontal
                     ? image2Horizontal.sourceUrl
                     : image2Vertical.sourceUrl
                 }
                 alt={title}
-              />
+              /> */}
             </div>
           </div>
         </div>
