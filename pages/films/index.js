@@ -25,7 +25,7 @@ export default function Films({ films }) {
           setFilmsArray={setFilmsArray}
           setActiveFilm={setActiveFilm}
           films={films}
-          listType={"View as landscape"}
+          listType={"View as scroll"}
           link={"/"}
         />
       </ul>
