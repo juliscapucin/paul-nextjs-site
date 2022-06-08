@@ -54,11 +54,23 @@ ABOUT
   display: block;
 }
 
-.aboutImg {
+.aboutImgContainer {
   position: relative;
   width: 100%;
   height: 25rem;
   margin-bottom: 3rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    color: $clr-white;
+  }
+
+  .aboutImg {
+    position: absolute;
+  }
 }
 
 .aboutParagraph {
@@ -78,13 +90,9 @@ ABOUT
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
   }
-  .aboutImg {
+  .aboutImgContainer {
     grid-area: 1 / 1 / span 1 / span 1;
     height: 75vh;
-    img {
-      height: 100%;
-      width: auto;
-    }
   }
   .aboutParagraph {
     grid-area: 1 / 2 / span 1 / span 1;
@@ -314,12 +322,7 @@ FILM
     margin: 3rem 0 0 0;
     position: relative;
     overflow: hidden;
-    height: clamp(30rem, 80vh, 90rem);
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+    height: clamp(20rem, 50vh, 40rem);
   }
 
   .filmInfo {
@@ -341,6 +344,10 @@ FILM
   }
 
   @media screen and (min-width: $screen-large) {
+    .filmImg1 {
+      height: clamp(30rem, 80vh, 90rem);
+    }
+
     .filmInfo {
       .shortDescription {
         width: 55%;
@@ -435,7 +442,7 @@ FILM INFO
 */
 
 .filmInfoContainer {
-  width: 70vw;
+  width: 90vw;
   position: fixed;
   right: 5vw;
   bottom: 2rem;
@@ -490,13 +497,13 @@ FILM ITEM
 .filmItemContainer {
   width: 100vw;
   min-height: 100vh;
-  padding: 0 7vw;
-  opacity: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: $screen-large) {
-  .filmItemWrapper {
+  .filmItemContainer {
     min-width: 100vw;
+    padding: 0 7vw;
   }
 }
 
@@ -508,29 +515,43 @@ FILM ITEM
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(14, 1fr);
 
-  .img1Wrapper,
-  .img2Wrapper {
+  .filmItemImg1Container,
+  .filmItemImg2Container {
     position: relative;
     overflow: hidden;
   }
 
-  .img1Wrapper {
+  .filmItemImg1Container {
     width: 100%;
-    grid-area: 6 / 1 / span 5 / span 10;
+    grid-area: 4 / 1 / span 7 / span 10;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h5 {
+      color: $clr-white;
+    }
+
+    .filmItemImg {
+      position: absolute;
+    }
   }
-  .img2Wrapper {
+  .filmItemImg2Container {
     width: 100%;
     padding-top: 1rem;
     grid-area: 2 / 4 / span 4 / span 7;
+    display: none;
   }
 
   @media screen and (min-width: $screen-large) {
     grid-template-rows: repeat(8, 1fr);
-    .img1Wrapper {
+    .filmItemImg1Container {
       grid-area: 4 / 1 / span 4 / span 4;
     }
-    .img2Wrapper {
+    .filmItemImg2Container {
       grid-area: 1 / 5 / span 5 / span 7;
+      display: block;
     }
   }
 }

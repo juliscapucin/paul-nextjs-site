@@ -22,9 +22,9 @@ export default function About({ about }) {
           <h1>About</h1>
         </div>
         <div className={styles.aboutGrid}>
-          <div className={styles.aboutImg}>
+          <div className={styles.aboutImgContainer}>
             <Image
-              className={styles.img}
+              className={styles.aboutImg}
               src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'
               layout='fill'
@@ -32,6 +32,7 @@ export default function About({ about }) {
               objectPosition='center center'
               priority
             />
+            <h5>Loading image...</h5>
             {/* <img
               src={aboutImage.sourceUrl}
               alt='Paul-de-Heer'

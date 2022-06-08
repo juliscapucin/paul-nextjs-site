@@ -59,9 +59,9 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
     >
       <div className={styles.filmItemGrid}>
         {/* <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}> */}
-        <div className={styles.img1Wrapper}>
+        <div className={styles.filmItemImg1Container}>
           <Image
-            className={styles.img1}
+            className={styles.filmItemImg}
             src={image1.sourceUrl}
             alt={title}
             layout='fill'
@@ -69,13 +69,14 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
             objectPosition='center center'
             priority
           />
+          <h5>Loading image...</h5>
         </div>
-        <div className={styles.img2Wrapper}>
+        <div className={styles.filmItemImg2Container}>
           {videoLink ? (
             <VideoPlayer link={videoLink} />
           ) : (
             <Image
-              className={styles.img2}
+              className={styles.filmItemImg}
               src={alternativeImage.sourceUrl}
               alt={title}
               layout='fill'
