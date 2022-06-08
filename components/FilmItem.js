@@ -6,7 +6,7 @@ import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import useIntersect from "@/hooks/useIntersect";
 
-import styles from "@/styles/FilmItem.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 /*
 =================== 
@@ -55,8 +55,7 @@ export default function FilmItem({ film, id, updateActiveFilm, index }) {
       animate='visible'
       exit='exit'
       ref={ref}
-      className={styles.filmItemWrapper}
-      style={{ opacity: 0 }}
+      className={styles.filmItemContainer}
     >
       <div className={styles.filmItemGrid}>
         {/* <div className={styles.img1Wrapper} data-scroll data-scroll-speed={1}> */}

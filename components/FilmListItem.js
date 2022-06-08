@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import styles from "@/styles/FilmListItem.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 const containerVariants = {
   hidden: { x: 0 },
@@ -37,9 +37,9 @@ export default function FilmListItem({ slug, filmACF, title, id }) {
       <Link href={`/films/${slug}`} key={id}>
         <a>
           <motion.div variants={itemVariants} className={styles.filmListItem}>
-            <div className={styles.imgContainer}>
+            <div className={styles.filmListImgContainer}>
               <Image
-                className={styles.img1}
+                className={styles.filmListImg1}
                 src={filmACF.image1.sourceUrl}
                 alt={title}
                 layout='fill'

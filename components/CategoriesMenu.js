@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 import { useGlobalContext } from "@/data/context";
-import styles from "@/styles/CategoriesMenu.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 function CategoriesMenu({
   setActiveFilm,

@@ -8,7 +8,7 @@ import FilmListItem from "@/components/FilmListItem";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
-import styles from "@/styles/Films.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 // FILMS
 // -----

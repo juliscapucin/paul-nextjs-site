@@ -16,6 +16,14 @@ const opacityTransitionVariants = {
   exit: { opacity: 1 },
 };
 
+const opacity2TransitionVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+  exit: { opacity: 0, transition: { duration: 0.1 } },
+};
+
 const transitionContainerVariants = {
   visible: {
     x: 0,
@@ -40,48 +48,56 @@ export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();
 
   return (
-    <motion.div
-      variants={opacityTransitionVariants}
-      initial='hidden'
-      animate='visible'
-      exit='exit'
-    >
+    <>
       <motion.div
-        className={styles.transition}
-        variants={transitionContainerVariants}
+        variants={opacityTransitionVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
       >
         <motion.div
-          className={styles.transitionUnit}
-          variants={transitionVariants}
-        ></motion.div>
-        <motion.div
-          className={styles.transitionUnit}
-          variants={transitionVariants}
-        ></motion.div>
-        <motion.div
-          className={styles.transitionUnit}
-          variants={transitionVariants}
-        ></motion.div>
-        <motion.div
-          className={styles.transitionUnit}
-          variants={transitionVariants}
-        ></motion.div>
+          className={styles.transition}
+          variants={transitionContainerVariants}
+        >
+          <motion.div
+            className={styles.transitionUnit}
+            variants={transitionVariants}
+          ></motion.div>
+          <motion.div
+            className={styles.transitionUnit}
+            variants={transitionVariants}
+          ></motion.div>
+          <motion.div
+            className={styles.transitionUnit}
+            variants={transitionVariants}
+          ></motion.div>
+          <motion.div
+            className={styles.transitionUnit}
+            variants={transitionVariants}
+          ></motion.div>
+        </motion.div>
       </motion.div>
       <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
       </Head>
-
-      <div className={styles.mainContainer}>
-        <React.StrictMode>
-          <AppProvider>
-            <Header />
-            {children}
-          </AppProvider>
-        </React.StrictMode>
-      </div>
-    </motion.div>
+      <motion.div
+        variants={opacity2TransitionVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <div className={styles.mainContainer}>
+          <React.StrictMode>
+            <AppProvider>
+              <Header />
+              {children}
+            </AppProvider>
+          </React.StrictMode>
+        </div>
+      </motion.div>
+    </>
   );
 }
 

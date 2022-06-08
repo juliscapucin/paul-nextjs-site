@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import styles from "@/styles/FilmInfo.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 /*
 =================== 
@@ -49,7 +49,7 @@ export default function FilmInfo({
       <Link href={`/films/${activeFilmSlug}`}>
         <a>
           <div className={styles.filmItemInfo} data-scroll-sticky>
-            <div className={styles.titleContainer}>
+            <div className={styles.filmInfoTitleContainer}>
               <motion.h1
                 variants={titleVariants}
                 className={styles.filmItemTitle}

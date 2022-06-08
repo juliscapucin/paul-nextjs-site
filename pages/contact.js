@@ -5,7 +5,7 @@ import Map from "@/components/Map";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
-import styles from "@/styles/Contact.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 // CONTACT
 // -------
@@ -16,7 +16,7 @@ export default function Contact({ contact }) {
 
   return (
     <Layout title={"Contact"}>
-      <div className={styles.container} data-scroll-container>
+      <div className={styles.contactContainer} data-scroll-container>
         <div className={styles.titleContainer}>
           <h1>Contact</h1>
         </div>

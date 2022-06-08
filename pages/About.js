@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
-import styles from "@/styles/About.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 // ABOUT
 // -----
@@ -17,11 +17,7 @@ export default function About({ about }) {
 
   return (
     <Layout title={"About"}>
-      <div
-        className={styles.container}
-        style={{ opacity: 0 }}
-        data-scroll-container
-      >
+      <div className={styles.aboutContainer} data-scroll-container>
         <div className={styles.titleContainer}>
           <h1>About</h1>
         </div>

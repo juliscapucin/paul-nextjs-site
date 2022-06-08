@@ -11,7 +11,7 @@ import { AppProvider } from "@/data/context";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 // HOME
 // ----
@@ -71,7 +71,7 @@ export default function Home({ films }) {
           </AnimatePresence>
         </div>
         <div
-          className={styles.filmsContainer}
+          className={styles.homeContainer}
           ref={refScrollContainer}
           data-scroll-container
         >

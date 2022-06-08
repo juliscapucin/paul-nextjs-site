@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import styles from "@/styles/Back.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 export default function Back() {
   return (

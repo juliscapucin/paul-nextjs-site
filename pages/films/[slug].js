@@ -11,7 +11,7 @@ import Back from "@/components/Back";
 
 import useLocoScroll from "@/hooks/useLocoScroll";
 
-import styles from "@/styles/Film.module.scss";
+import styles from "@/styles/Layout.module.scss";
 
 // FILM
 // ----
@@ -42,8 +42,7 @@ export default function Film({ film }) {
       <Back />
       <Layout title={"Film"}>
         <div
-          className={styles.container}
-          style={{ opacity: 0 }}
+          className={styles.filmContainer}
           ref={refScrollContainer}
           data-scroll-container
         >
